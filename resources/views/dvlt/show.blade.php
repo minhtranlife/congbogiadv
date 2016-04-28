@@ -35,14 +35,18 @@
                                             </tr>
                                             </thead>
                                             @if(count($model)>0)
-                                            @foreach($model as $ct)
+
                                             <tbody>
-                                                <td>{{$ct->loaip.'-'.$ct->qccl}}</td>
-                                                <td>{{$ct->sohieu}}</td>
-                                                <td>{{number_format($ct->mucgia)}}</td>
-                                                <td>{{$ct->ghichu}}</td>
-                                            </tbody>
+                                            @foreach($model as $ct)
+                                                <tr>
+                                                    <td>{{$ct->loaip.'-'.$ct->qccl}}</td>
+                                                    <td>{{$ct->sohieu}}</td>
+                                                    <td>{{number_format($ct->mucgia)}}</td>
+                                                    <td>{{$ct->ghichu}}</td>
+                                                </tr>
                                             @endforeach
+                                            </tbody>
+
                                             @endif
                                         </table>
                                     </div>

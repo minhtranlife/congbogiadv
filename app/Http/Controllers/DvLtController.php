@@ -60,13 +60,14 @@ class DvLtController extends Controller
             ->where('trangthai','Duyệt')
             ->max('id');
         $modelhs = KkGdvLt::where('id',$idhs)->first();
-        $model = CtKkGdvLt::where('id',$idhs)
+        $model = CtKkGdvLt::where('idkk',$idhs)
             ->get();
         $modelttp = TtQlDvLt::where('masothue',$masothue)
             ->get();
         foreach($model as $ct){
             $this->getTTP($modelttp,$ct);
         }
+        //dd($model);
         return view('dvlt.show')
             ->with('model',$model)
             ->with('modelhs',$modelhs)
