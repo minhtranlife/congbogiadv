@@ -13,3 +13,7 @@
 
     // DEFAULT
 Route::get('/', 'HomeController@index');
+
+
+Route::get('dvlt','DvLtController@index');
+Route::get('dvlt/{masothue}/show','DvLtController@show');

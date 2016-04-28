@@ -23,7 +23,7 @@ class HomeController extends Controller
 
         return view('dashboard')
 
-            ->with('pageTitle', 'Tổng quan');
+            ->with('pageTitle', 'Đôi nét về Khánh Hòa');
 
     }
 
