@@ -19,7 +19,7 @@
                         <div class="portlet-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <p>Ngày áp dụng: {{getDayVn($modelhs->ngayad)}}</p>
+                                    <p>Ngày áp dụng: @if(count($modelhs)>0){{getDayVn($modelhs->ngayad)}}@endif</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -34,6 +34,7 @@
                                                 <th>Ghi chú</th>
                                             </tr>
                                             </thead>
+                                            @if(count($model)>0)
                                             @foreach($model as $ct)
                                             <tbody>
                                                 <td>{{$ct->loaip.'-'.$ct->qccl}}</td>
@@ -42,13 +43,14 @@
                                                 <td>{{$ct->ghichu}}</td>
                                             </tbody>
                                             @endforeach
+                                            @endif
                                         </table>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <p>{!! nl2br(e($modelhs->ghichu)) !!}</p>
+                                    <p> @if(count($modelhs)>0){!! nl2br(e($modelhs->ghichu)) !!}@endif</p>
                                 </div>
                             </div>
                         </div>
