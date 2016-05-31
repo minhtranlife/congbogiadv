@@ -10,116 +10,205 @@
 @stop
 
 @section('content')
-    <div class="page-content">
-        <div class="row">
-            <div class="col-lg-12"><h2>Nam massa eros</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam massa eros, dictum ut imperdiet
-                    eget, laoreet placerat orci. Aliquam eget neque neque. Donec dictum, enim convallis gravida
-                    fringilla, velit sem condimentum nunc, in pretium libero est sit amet elit. Nam ut arcu ac
-                    eros commodo rutrum ac nec purus. Fusce sodales pulvinar odio, vulputate fringilla ligula
-                    bibendum sit amet. Duis risus neque, molestie tincidunt odio vel, sodales vulputate mauris.
-                    Sed adipiscing justo tristique enim pharetra, nec ultricies metus sagittis.</p>
-
-                <p>Duis varius id massa ut pellentesque. Nulla commodo erat eu mi aliquet aliquam. Vivamus
-                    commodo massa et nunc ullamcorper, vel pharetra purus consequat. Suspendisse a neque quis
-                    nibh dictum posuere ac et enim. Aliquam sit amet accumsan erat. Nullam euismod elit tellus,
-                    vel luctus enim luctus feugiat. Vestibulum quis placerat ipsum, porta vehicula massa. Etiam
-                    nec risus ac lacus gravida tincidunt. Vivamus eu ante vehicula, aliquam nisl et, suscipit
-                    ipsum. Vivamus velit nulla, tincidunt ac risus et, congue lobortis mauris. In condimentum
-                    consectetur purus, vel adipiscing felis sollicitudin vitae. Phasellus luctus, ligula eu
-                    tempor ullamcorper, lectus elit posuere augue, eget tempus lacus nibh a purus. Ut risus
-                    velit, adipiscing eu leo quis, vestibulum porttitor nunc.</p>
-
-                <p>Sed sed blandit urna. Proin ac sem nisl. Mauris risus orci, tristique eget velit at, congue
-                    euismod lacus. Curabitur id purus sit amet urna rutrum bibendum ac at quam. In hendrerit
-                    enim eu turpis molestie, et euismod tellus viverra. Suspendisse molestie at leo sit amet
-                    volutpat. Integer augue libero, scelerisque vitae luctus ac, consequat et arcu. Nullam
-                    malesuada turpis eu ullamcorper tincidunt. Integer aliquam felis eget neque facilisis
-                    ornare. Integer pharetra vitae dolor vel elementum. In nisl risus, dignissim non fermentum
-                    ac, pretium sit amet dui. Phasellus fringilla orci sapien, vel lacinia mi dapibus ut. Donec
-                    euismod congue nulla, in porttitor sapien. Pellentesque facilisis luctus adipiscing.</p>
-
-                <p><img src="http://placehold.it/350x150" alt="" class="img-responsive pull-left mrm"/>Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit. Nam massa eros, dictum ut imperdiet eget,
-                    laoreet placerat orci. Aliquam eget neque neque. Donec dictum, enim convallis gravida
-                    fringilla, velit sem condimentum nunc, in pretium libero est sit amet elit. Nam ut arcu ac
-                    eros commodo rutrum ac nec purus. Fusce sodales pulvinar odio, vulputate fringilla ligula
-                    bibendum sit amet. Duis risus neque, molestie tincidunt odio vel, sodales vulputate mauris.
-                    Sed adipiscing justo tristique enim pharetra, nec ultricies metus sagittis.Duis varius id
-                    massa ut pellentesque. Nulla commodo erat eu mi aliquet aliquam. Vivamus commodo massa et
-                    nunc ullamcorper, vel pharetra purus consequat. Suspendisse a neque quis nibh dictum posuere
-                    ac et enim. Aliquam sit amet accumsan erat. Nullam euismod elit tellus, vel luctus enim
-                    luctus feugiat. Vestibulum quis placerat ipsum, porta vehicula massa. Etiam nec risus ac
-                    lacus gravida tincidunt. Vivamus eu ante vehicula, aliquam nisl et, suscipit ipsum. Vivamus
-                    velit nulla, tincidunt ac risus et, congue lobortis mauris. In condimentum consectetur
-                    purus, vel adipiscing felis sollicitudin vitae. Phasellus luctus, ligula eu tempor
-                    ullamcorper, lectus elit posuere augue, eget tempus lacus nibh a purus. Ut risus velit,
-                    adipiscing eu leo quis, vestibulum porttitor nunc. Sed sed blandit urna. Proin ac sem nisl.
-                    Mauris risus orci, tristique eget velit at, congue euismod lacus. Curabitur id purus sit
-                    amet urna rutrum bibendum ac at quam. In hendrerit enim eu turpis molestie, et euismod
-                    tellus viverra. Suspendisse molestie at leo sit amet volutpat. Integer augue libero,
-                    scelerisque vitae luctus ac, consequat et arcu. Nullam malesuada turpis eu ullamcorper
-                    tincidunt. Integer aliquam felis eget neque facilisis ornare. Integer pharetra vitae dolor
-                    vel elementum. In nisl risus, dignissim non fermentum ac, pretium sit amet dui. Phasellus
-                    fringilla orci sapien, vel lacinia mi dapibus ut. Donec euismod congue nulla, in porttitor
-                    sapien. Pellentesque facilisis luctus adipiscing.</p>
-
-                <div class="clearfix"></div>
-                <p><img src="http://placehold.it/350x150" alt="" class="img-responsive pull-right mlm"/>Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit. Nam massa eros, dictum ut imperdiet eget,
-                    laoreet placerat orci. Aliquam eget neque neque. Donec dictum, enim convallis gravida
-                    fringilla, velit sem condimentum nunc, in pretium libero est sit amet elit. Nam ut arcu ac
-                    eros commodo rutrum ac nec purus. Fusce sodales pulvinar odio, vulputate fringilla ligula
-                    bibendum sit amet. Duis risus neque, molestie tincidunt odio vel, sodales vulputate mauris.
-                    Sed adipiscing justo tristique enim pharetra, nec ultricies metus sagittis.Duis varius id
-                    massa ut pellentesque. Nulla commodo erat eu mi aliquet aliquam. Vivamus commodo massa et
-                    nunc ullamcorper, vel pharetra purus consequat. Suspendisse a neque quis nibh dictum posuere
-                    ac et enim. Aliquam sit amet accumsan erat. Nullam euismod elit tellus, vel luctus enim
-                    luctus feugiat. Vestibulum quis placerat ipsum, porta vehicula massa. Etiam nec risus ac
-                    lacus gravida tincidunt. Vivamus eu ante vehicula, aliquam nisl et, suscipit ipsum. Vivamus
-                    velit nulla, tincidunt ac risus et, congue lobortis mauris. In condimentum consectetur
-                    purus, vel adipiscing felis sollicitudin vitae. Phasellus luctus, ligula eu tempor
-                    ullamcorper, lectus elit posuere augue, eget tempus lacus nibh a purus. Ut risus velit,
-                    adipiscing eu leo quis, vestibulum porttitor nunc. Sed sed blandit urna. Proin ac sem nisl.
-                    Mauris risus orci, tristique eget velit at, congue euismod lacus. Curabitur id purus sit
-                    amet urna rutrum bibendum ac at quam. In hendrerit enim eu turpis molestie, et euismod
-                    tellus viverra. Suspendisse molestie at leo sit amet volutpat. Integer augue libero,
-                    scelerisque vitae luctus ac, consequat et arcu. Nullam malesuada turpis eu ullamcorper
-                    tincidunt. Integer aliquam felis eget neque facilisis ornare. Integer pharetra vitae dolor
-                    vel elementum. In nisl risus, dignissim non fermentum ac, pretium sit amet dui. Phasellus
-                    fringilla orci sapien, vel lacinia mi dapibus ut. Donec euismod congue nulla, in porttitor
-                    sapien. Pellentesque facilisis luctus adipiscing.</p>
-
-                <div class="clearfix"></div>
-                <p><img src="http://placehold.it/150x150" alt="" class="img-responsive pull-left mrm"/>Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit. Nam massa eros, dictum ut imperdiet eget,
-                    laoreet placerat orci. Aliquam eget neque neque. Donec dictum, enim convallis gravida
-                    fringilla, velit sem condimentum nunc, in pretium libero est sit amet elit. Nam ut arcu ac
-                    eros commodo rutrum ac nec purus. Fusce sodales pulvinar odio, vulputate fringilla ligula
-                    bibendum sit amet. Duis risus neque, molestie tincidunt odio vel, sodales vulputate mauris.
-                    Sed adipiscing justo tristique enim pharetra, nec ultricies metus sagittis. Duis varius id
-                    massa ut pellentesque. Nulla commodo erat eu mi aliquet aliquam. Vivamus commodo massa et
-                    nunc ullamcorper, vel pharetra purus consequat. Suspendisse a neque quis nibh dictum posuere
-                    ac et enim. Aliquam sit amet accumsan erat. Nullam euismod elit tellus, vel luctus enim
-                    luctus feugiat. Vestibulum quis placerat ipsum, porta vehicula massa. Etiam nec risus ac
-                    lacus gravida tincidunt. Vivamus eu ante vehicula, aliquam nisl et, suscipit ipsum. Vivamus
-                    velit nulla, tincidunt ac risus et, congue lobortis mauris. In condimentum consectetur
-                    purus, vel adipiscing felis sollicitudin vitae. Phasellus luctus, ligula eu tempor
-                    ullamcorper, lectus elit posuere augue, eget tempus lacus nibh a purus. Ut risus velit,
-                    adipiscing eu leo quis, vestibulum porttitor nunc. Sed sed blandit urna. Proin ac sem nisl.
-                    Mauris risus orci, tristique eget velit at, congue euismod lacus. Curabitur id purus sit
-                    amet urna rutrum bibendum ac at quam. In hendrerit enim eu turpis molestie, et euismod
-                    tellus viverra. Suspendisse molestie at leo sit amet volutpat. Integer augue libero,
-                    scelerisque vitae luctus ac, consequat et arcu. Nullam malesuada turpis eu ullamcorper
-                    tincidunt. Integer aliquam felis eget neque facilisis ornare. Integer pharetra vitae dolor
-                    vel elementum. In nisl risus, dignissim non fermentum ac, pretium sit amet dui. Phasellus
-                    fringilla orci sapien, vel lacinia mi dapibus ut. Donec euismod congue nulla, in porttitor
-                    sapien. Pellentesque facilisis luctus adipiscing.</p>
-
-                <div class="clearfix"></div>
-            </div>
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dịch vụ lưu trú
+                <small>tiêu biểu</small>
+            </h1>
         </div>
     </div>
-    <!--END CONTENT--></div>
-@stop 
+    <!-- /.row -->
+
+    <!-- Projects Row -->
+    <div class="row">
+        @foreach($ksrd as $ks)
+        <div class="col-md-3 portfolio-item">
+            <a href="{{'dvlt/'.$ks->macskd}}">
+                @if($ks->toado != null)
+                    <img class="img-responsive"
+                         src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
+                            maptype=roadmap&amp;markers=color:red|{{$ks->toado}}" alt="">
+                @else
+                    <img class="img-responsive"
+                         src="http://placehold.it/750x500" alt="750x450">
+                @endif
+            </a>
+            <h3><a href="{{'dvlt/'.$ks->macskd}}">{{$ks->tencskd}}</a></h3>
+            <div class="ratings" style="color: #ec0;">
+                <p>
+                    @if($ks->loaihang == '1')
+                        <span class="glyphicon glyphicon-star"></span>
+                    @elseif($ks->loaihang == '1.5')
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    @elseif($ks->loaihang == '2')
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    @elseif($ks->loaihang == '2.5')
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    @elseif($ks->loaihang == '3')
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    @elseif($ks->loaihang == '3.5')
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    @elseif($ks->loaihang == '4')
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    @elseif($ks->loaihang == '4.5')
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    @elseif($ks->loaihang == '5')
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    @else
+                        {{$ks->loaihang}}
+                    @endif
+                </p>
+            </div>
+            <p><i class="glyphicon glyphicon-map-marker"></i> {{$ks->diachikd}}</p>
+            <!--p>
+                <a href="{{'dvlt/'.$ks->macskd}}" class="btn btn-primary">Xem Chi Tiết</a>
+            </p-->
+        </div>
+        @endforeach
+    </div>
+    <!-- /.row -->
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dịch vụ vận tải xe khách
+                <small>tiêu biểu</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Projects Row -->
+    <div class="row">
+        @foreach($dnvtxk as $dnxk)
+        <div class="col-md-3 portfolio-item">
+            <a href="{{url('dvvtxk/'.$dnxk->masothue)}}">
+                @if($dnxk->toado != null)
+                    <img class="img-responsive"
+                         src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
+                            maptype=roadmap&amp;markers=color:red|{{$dnxk->toado}}" alt="">
+                @else
+                    <img class="img-responsive"
+                         src="http://placehold.it/750x500" alt="750x450">
+                @endif
+            </a>
+            <h3><a href="{{url('dvvtxk/'.$dnxk->masothue)}}">{{$dnxk->tendonvi}}</a></h3>
+            <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
+            <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnxk->diachi}}</p>
+        </div>
+        @endforeach
+    </div>
+    <!-- /.row -->
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dịch vụ vận tải xe buýt
+                <small>tiêu biểu</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Projects Row -->
+    <div class="row">
+        @foreach($dnvtxb as $dnxb)
+            <div class="col-md-3 portfolio-item">
+                <a href="{{url('dvvtxb/'.$dnxb->masothue)}}">
+                    @if($dnxb->toado != null)
+                        <img class="img-responsive"
+                             src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
+                            maptype=roadmap&amp;markers=color:red|{{$dnxb->toado}}" alt="">
+                    @else
+                        <img class="img-responsive"
+                             src="http://placehold.it/750x500" alt="750x450">
+                    @endif
+                </a>
+                <h3><a href="{{url('dvvtxb/'.$dnxb->masothue)}}">{{$dnxb->tendonvi}}</a></h3>
+                <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
+                <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnxb->diachi}}</p>
+            </div>
+        @endforeach
+    </div>
+    <!-- /.row -->
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dịch vụ vận tải xe taxi
+                <small>tiêu biểu</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Projects Row -->
+    <div class="row">
+        @foreach($dnvtxtx as $dntx)
+            <div class="col-md-3 portfolio-item">
+                <a href="{{url('dvvtxtx/'.$dntx->masothue)}}">
+                    @if($dntx->toado != null)
+                        <img class="img-responsive"
+                             src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
+                            maptype=roadmap&amp;markers=color:red|{{$dntx->toado}}" alt="">
+                    @else
+                        <img class="img-responsive"
+                             src="http://placehold.it/750x500" alt="750x450">
+                    @endif
+                </a>
+                <h3><a href="{{url('dvvtxtx/'.$dntx->masothue)}}">{{$dntx->tendonvi}}</a></h3>
+                <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
+                <p><i class="glyphicon glyphicon-map-marker"></i> {{$dntx->diachi}}</p>
+            </div>
+        @endforeach
+    </div>
+    <!-- /.row -->
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dịch vụ vận tải chở hàng
+                <small>tiêu biểu</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Projects Row -->
+    <div class="row">
+        @foreach($dnvtk as $dnch)
+            <div class="col-md-3 portfolio-item">
+                <a href="{{url('dvvtch/'.$dnch->masothue)}}">
+                    @if($dnch->toado != null)
+                        <img class="img-responsive"
+                             src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
+                            maptype=roadmap&amp;markers=color:red|{{$dntx->toado}}" alt="">
+                    @else
+                        <img class="img-responsive"
+                             src="http://placehold.it/750x500" alt="750x450">
+                    @endif
+                </a>
+                <h3><a href="{{url('dvvtch/'.$dnch->masothue)}}">{{$dnch->tendonvi}}</a></h3>
+                <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
+                <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnch->diachi}}</p>
+            </div>
+        @endforeach
+    </div>
+    <!-- /.row -->
+@stop

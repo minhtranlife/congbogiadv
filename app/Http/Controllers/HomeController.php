@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\CbKkGDvLt;
+use App\CsKdDvLt;
 use App\DmHhTn;
 use App\DmHhXnK;
+use App\DonViDvVt;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -13,83 +16,39 @@ use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
+        $ksrd = CsKdDvLt::orderByRaw("RAND()")
+            ->take(4)
+            ->get();
 
+        $dnvtxk = DonViDvVt::where('dvxk',1)
+            ->orderByRaw("RAND()")
+            ->take(4)
+            ->get();
+        //dd($dnvtxk);
+        $dnvtxtx = DonViDvVt::where('dvxtx',1)
+            ->orderByRaw("RAND()")
+            ->take(4)
+            ->get();
+        $dnvtxb = DonViDvVt::where('dvxb',1)
+            ->orderByRaw("RAND()")
+            ->take(4)
+            ->get();
+        $dnvtk = DonViDvVt::where('dvk',1)
+            ->orderByRaw("RAND()")
+            ->take(4)
+            ->get();
         return view('dashboard')
-
-            ->with('pageTitle', 'Đôi nét về Khánh Hòa');
+            ->with('ksrd',$ksrd)
+            ->with('dnvtxk',$dnvtxk)
+            ->with('dnvtxtx',$dnvtxtx)
+            ->with('dnvtxb',$dnvtxb)
+            ->with('dnvtk',$dnvtk)
+            ->with('pageTitle', 'Công bố giá dịch vụ');
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

@@ -14,6 +14,23 @@
     // DEFAULT
 Route::get('/', 'HomeController@index');
 
+    //Dịch vụ lưu trú
+Route::get('dvlt/{macskd}','DvLtController@show');
+Route::get('dsdvlt/{hang}','DvLtController@index');
 
-Route::get('dvlt','DvLtController@index');
-Route::get('dvlt/{masothue}/show','DvLtController@show');
+
+    //Dịch vụ vận tải xe khách
+Route::get('dvvtxk/{masothue}','DvVtXkController@show');
+Route::get('dsdvvtxk','DvVtXkController@index');
+
+    //Dịch vụ vận tải xe buýt
+Route::get('dvvtxb/{masothue}','DvVtXbController@show');
+Route::get('dsdvvtxb','DvVtXbController@index');
+
+    //Dịch vụ vận tải xe taxi
+Route::get('dvvtxtx/{masothue}','DvVtXtxController@show');
+Route::get('dsdvvtxtx','DvVtXtxController@index');
+
+    //Dịch vụ vận tải chở hàng
+Route::get('dvvtch/{masothue}','DvVtChController@show');
+Route::get('dsdvvtch','DvVtChController@index');
