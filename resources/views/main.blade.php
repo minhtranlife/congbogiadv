@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>{{$pageTitle}}</title>
-
+    <link rel="shortcut icon" href="{{ url('images/LIFESOFT.png')}}" type="image/x-icon">
     <!-- Bootstrap Core CSS -->
     <link href="{{url('css/bootstrap.min.css')}}" rel="stylesheet">
 
@@ -38,6 +38,7 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -110,7 +111,7 @@
     <footer>
         <div class="row">
             <div class="col-lg-12">
-                <p>Copyright &copy; LifeSoft</p>
+                <p>2016 © LifeSoft - Tiện ích hơn - Hiệu quả hơn</p>
             </div>
         </div>
         <!-- /.row -->
