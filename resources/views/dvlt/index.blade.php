@@ -10,7 +10,7 @@
 
             $('#select_hang').change(function() {
                 var hang = $('#select_hang').val();
-                var url = '/dsdvlt/'+hang;
+                var url = '/dich-vu-luu-tru/ks-'+hang+'-sao';
 
                 //var url = current_path_url;
                 window.location.href = url;
@@ -49,7 +49,7 @@
         @foreach($ksrd as $ks)
 
             <div class="col-md-3 portfolio-item">
-                <a href="{{url('dvlt/'.$ks->macskd)}}">
+                <a href="{{url('cskd-dich-vu-luu-tru/'.$ks->macskd)}}">
                     @if($ks->toado != null)
                     <img class="img-responsive"
                          src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
@@ -59,7 +59,7 @@
                              src="http://placehold.it/750x500" alt="750x450">
                     @endif
                 </a>
-                <h5><a href="{{url('dvlt/'.$ks->macskd)}}"><b>{{$ks->tencskd}}</b></a></h5>
+                <h5><a href="{{url('cskd-dich-vu-luu-tru/'.$ks->macskd)}}"><b>{{$ks->tencskd}}</b></a></h5>
                 <div class="ratings" style="color: #ec0;">
                     <p>
                         @if($ks->loaihang == '1')

@@ -129,7 +129,7 @@
         </div>
         @foreach($modelk as $ksk)
         <div class="col-md-3 portfolio-item">
-            <a href="{{$ksk->macskd}}">
+            <a href="{{url('cskd-dich-vu-luu-tru/'.$ksk->macskd)}}">
                 @if($ksk->toado != null)
                     <img class="img-responsive"
                          src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
@@ -139,7 +139,7 @@
                          src="http://placehold.it/750x500" alt="750x450">
                 @endif
             </a>
-            <h3><a href="{{url('dvlt/'.$ksk->macskd)}}">{{$ksk->tencskd}}</a></h3>
+            <h3><a href="{{url('cskd-dich-vu-luu-tru/'.$ksk->macskd)}}">{{$ksk->tencskd}}</a></h3>
             <div class="ratings" style="color: #ec0;">
                 <p>
                     @if($ksk->loaihang == '1')

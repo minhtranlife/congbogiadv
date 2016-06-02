@@ -25,7 +25,7 @@
 
         @foreach($dnvt as $dn)
             <div class="col-md-3 portfolio-item">
-                <a href="{{url('dvvtxk/'.$dn->masothue)}}">
+                <a href="{{url('dn-dich-vu-van-tai-xe-khach/'.$dn->masothue)}}">
                     @if($dn->toado != null)
                     <img class="img-responsive"
                          src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
@@ -35,7 +35,7 @@
                              src="http://placehold.it/750x500" alt="750x450">
                     @endif
                 </a>
-                <h3><a href="{{url('dvvtxk/'.$dn->masothue)}}">{{$dn->tendonvi}}</a></h3>
+                <h3><a href="{{url('dn-dich-vu-van-tai-xe-khach/'.$dn->masothue)}}">{{$dn->tendonvi}}</a></h3>
                 <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dn->diachi}}</p>
             </div>

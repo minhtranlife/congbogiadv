@@ -15,22 +15,22 @@
 Route::get('/', 'HomeController@index');
 
     //Dịch vụ lưu trú
-Route::get('dvlt/{macskd}','DvLtController@show');
-Route::get('dsdvlt/{hang}','DvLtController@index');
+Route::get('cskd-dich-vu-luu-tru/{macskd}','DvLtController@show');
+Route::get('dich-vu-luu-tru/ks-{hang}-sao','DvLtController@index');
 
 
     //Dịch vụ vận tải xe khách
-Route::get('dvvtxk/{masothue}','DvVtXkController@show');
-Route::get('dsdvvtxk','DvVtXkController@index');
+Route::get('dn-dich-vu-van-tai-xe-khach/{masothue}','DvVtXkController@show');
+Route::get('dich-vu-van-tai-xe-khach','DvVtXkController@index');
 
     //Dịch vụ vận tải xe buýt
-Route::get('dvvtxb/{masothue}','DvVtXbController@show');
-Route::get('dsdvvtxb','DvVtXbController@index');
+Route::get('dn-dich-vu-van-tai-xe-buyt/{masothue}','DvVtXbController@show');
+Route::get('dich-vu-van-tai-xe-buyt','DvVtXbController@index');
 
     //Dịch vụ vận tải xe taxi
-Route::get('dvvtxtx/{masothue}','DvVtXtxController@show');
-Route::get('dsdvvtxtx','DvVtXtxController@index');
+Route::get('dn-dich-vu-van-tai-xe-taxi/{masothue}','DvVtXtxController@show');
+Route::get('dich-vu-van-tai-xe-taxi','DvVtXtxController@index');
 
     //Dịch vụ vận tải chở hàng
-Route::get('dvvtch/{masothue}','DvVtChController@show');
-Route::get('dsdvvtch','DvVtChController@index');
+Route::get('dn-dich-vu-van-tai-cho-hang/{masothue}','DvVtChController@show');
+Route::get('dich-vu-van-tai-cho-hang','DvVtChController@index');

@@ -59,7 +59,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="{{url('dsdvlt/3')}}">Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú</a>
+                            <a href="{{url('dich-vu-luu-tru/ks-3-sao')}}">Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú</a>
                         </li>
                     </ul>
                 </li>
@@ -69,16 +69,16 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="{{url('dsdvvtxk')}}">Danh sách doanh nghiệp cung cấp dịch vụ vận tải xe khách</a>
+                            <a href="{{url('dich-vu-van-tai-xe-khach')}}">Danh sách doanh nghiệp cung cấp dịch vụ vận tải xe khách</a>
                         </li>
                         <li>
-                            <a href="{{url('dsdvvtxb')}}">Danh sách doanh nghiệp cung cấp dịch vụ vận tải xe buýt</a>
+                            <a href="{{url('dich-vu-van-tai-xe-buyt')}}">Danh sách doanh nghiệp cung cấp dịch vụ vận tải xe buýt</a>
                         </li>
                         <li>
-                            <a href="{{url('dsdvvtxtx')}}">Danh sách doanh nghiệp cung cấp dịch vụ vận tải xe taxi</a>
+                            <a href="{{url('dich-vu-van-tai-xe-taxi')}}">Danh sách doanh nghiệp cung cấp dịch vụ vận tải xe taxi</a>
                         </li>
                         <li>
-                            <a href="{{url('dsdvvtch')}}">Danh sách doanh nghiệp cung cấp dịch vụ vận tải chở hàng</a>
+                            <a href="{{url('dich-vu-van-tai-cho-hang')}}">Danh sách doanh nghiệp cung cấp dịch vụ vận tải chở hàng</a>
                         </li>
                     </ul>
                 </li>

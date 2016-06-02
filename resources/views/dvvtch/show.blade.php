@@ -86,7 +86,7 @@
         </div>
         @foreach($modelk as $dnk)
         <div class="col-md-3 portfolio-item">
-            <a href="{{$dnk->masothue}}">
+            <a href="{{url('dn-dich-vu-van-tai-cho-hang/'.$dnk->masothue)}}">
                 @if($dnk->toado != null)
                     <img class="img-responsive"
                          src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
@@ -96,7 +96,7 @@
                          src="http://placehold.it/750x500" alt="750x450">
                 @endif
             </a>
-            <h3><a href="{{url($dnk->masothue)}}">{{$dnk->tendonvi}}</a></h3>
+            <h3><a href="{{url('dn-dich-vu-van-tai-cho-hang/'.$dnk->masothue)}}">{{$dnk->tendonvi}}</a></h3>
             <p style="color: #888; font-size: .85em;">Vận tải chở hàng</p>
             <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnk->diachi}}</p>
             <!--p>

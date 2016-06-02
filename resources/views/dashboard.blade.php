@@ -24,7 +24,7 @@
     <div class="row">
         @foreach($ksrd as $ks)
         <div class="col-md-3 portfolio-item">
-            <a href="{{'dvlt/'.$ks->macskd}}">
+            <a href="{{'cskd-dich-vu-luu-tru/'.$ks->macskd}}">
                 @if($ks->toado != null)
                     <img class="img-responsive"
                          src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
@@ -34,7 +34,7 @@
                          src="http://placehold.it/750x500" alt="750x450">
                 @endif
             </a>
-            <h3><a href="{{'dvlt/'.$ks->macskd}}">{{$ks->tencskd}}</a></h3>
+            <h3><a href="{{'cskd-dich-vu-luu-tru/'.$ks->macskd}}">{{$ks->tencskd}}</a></h3>
             <div class="ratings" style="color: #ec0;">
                 <p>
                     @if($ks->loaihang == '1')
@@ -102,7 +102,7 @@
     <div class="row">
         @foreach($dnvtxk as $dnxk)
         <div class="col-md-3 portfolio-item">
-            <a href="{{url('dvvtxk/'.$dnxk->masothue)}}">
+            <a href="{{url('dn-dich-vu-van-tai-xe-khach/'.$dnxk->masothue)}}">
                 @if($dnxk->toado != null)
                     <img class="img-responsive"
                          src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
@@ -112,7 +112,7 @@
                          src="http://placehold.it/750x500" alt="750x450">
                 @endif
             </a>
-            <h3><a href="{{url('dvvtxk/'.$dnxk->masothue)}}">{{$dnxk->tendonvi}}</a></h3>
+            <h3><a href="{{url('dn-dich-vu-van-tai-xe-khach/'.$dnxk->masothue)}}">{{$dnxk->tendonvi}}</a></h3>
             <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
             <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnxk->diachi}}</p>
         </div>
@@ -132,7 +132,7 @@
     <div class="row">
         @foreach($dnvtxb as $dnxb)
             <div class="col-md-3 portfolio-item">
-                <a href="{{url('dvvtxb/'.$dnxb->masothue)}}">
+                <a href="{{url('dn-dich-vu-van-tai-xe-buyt/'.$dnxb->masothue)}}">
                     @if($dnxb->toado != null)
                         <img class="img-responsive"
                              src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
@@ -142,7 +142,7 @@
                              src="http://placehold.it/750x500" alt="750x450">
                     @endif
                 </a>
-                <h3><a href="{{url('dvvtxb/'.$dnxb->masothue)}}">{{$dnxb->tendonvi}}</a></h3>
+                <h3><a href="{{url('dn-dich-vu-van-tai-xe-buyt/'.$dnxb->masothue)}}">{{$dnxb->tendonvi}}</a></h3>
                 <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnxb->diachi}}</p>
             </div>
@@ -163,7 +163,7 @@
     <div class="row">
         @foreach($dnvtxtx as $dntx)
             <div class="col-md-3 portfolio-item">
-                <a href="{{url('dvvtxtx/'.$dntx->masothue)}}">
+                <a href="{{url('dn-dich-vu-van-tai-xe-taxi/'.$dntx->masothue)}}">
                     @if($dntx->toado != null)
                         <img class="img-responsive"
                              src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
@@ -173,7 +173,7 @@
                              src="http://placehold.it/750x500" alt="750x450">
                     @endif
                 </a>
-                <h3><a href="{{url('dvvtxtx/'.$dntx->masothue)}}">{{$dntx->tendonvi}}</a></h3>
+                <h3><a href="{{url('dn-dich-vu-van-tai-xe-taxi/'.$dntx->masothue)}}">{{$dntx->tendonvi}}</a></h3>
                 <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dntx->diachi}}</p>
             </div>
@@ -194,7 +194,7 @@
     <div class="row">
         @foreach($dnvtk as $dnch)
             <div class="col-md-3 portfolio-item">
-                <a href="{{url('dvvtch/'.$dnch->masothue)}}">
+                <a href="{{url('dn-dich-vu-van-tai-cho-hang/'.$dnch->masothue)}}">
                     @if($dnch->toado != null)
                         <img class="img-responsive"
                              src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
@@ -204,7 +204,7 @@
                              src="http://placehold.it/750x500" alt="750x450">
                     @endif
                 </a>
-                <h3><a href="{{url('dvvtch/'.$dnch->masothue)}}">{{$dnch->tendonvi}}</a></h3>
+                <h3><a href="{{url('dn-dich-vu-van-tai-cho-hang/'.$dnch->masothue)}}">{{$dnch->tendonvi}}</a></h3>
                 <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnch->diachi}}</p>
             </div>
