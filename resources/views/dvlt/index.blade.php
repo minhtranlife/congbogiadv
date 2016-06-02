@@ -47,6 +47,7 @@
     <div class="row">
 
         @foreach($ksrd as $ks)
+
             <div class="col-md-3 portfolio-item">
                 <a href="{{url('dvlt/'.$ks->macskd)}}">
                     @if($ks->toado != null)
@@ -58,7 +59,7 @@
                              src="http://placehold.it/750x500" alt="750x450">
                     @endif
                 </a>
-                <h3><a href="{{url('dvlt/'.$ks->macskd)}}">{{$ks->tencskd}}</a></h3>
+                <h5><a href="{{url('dvlt/'.$ks->macskd)}}"><b>{{$ks->tencskd}}</b></a></h5>
                 <div class="ratings" style="color: #ec0;">
                     <p>
                         @if($ks->loaihang == '1')

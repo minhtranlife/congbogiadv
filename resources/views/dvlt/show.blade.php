@@ -6,6 +6,7 @@
 
 
 @section('custom-script')
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAbv4bBMMV0m0Z0m4zEv6TTKcVN4CDhcSE"></script>
 
 @stop
 
@@ -85,6 +86,7 @@
                 <li><i class="glyphicon glyphicon-earphone"></i> {{$model->telkd}}</li>
                 <!--li><i class="glyphicon glyphicon-envelope"></i> {{$model->faxcskd}}</li-->
             </ul>
+            <!--button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onload="initialize()">Open Modal</button-->
         </div>
     </div>
     @if($modelkkct != '')
@@ -191,5 +193,33 @@
         @endforeach
     </div>
     <!-- /.row -->
+    <!-- Modal -->
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Google Map</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe
+                            width="600"
+                            height="450"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAbv4bBMMV0m0Z0m4zEv6TTKcVN4CDhcSE
+                            &q={{$model->toado}}" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 
 @stop 
