@@ -111,7 +111,7 @@
                     <tr>
                         <td>{{$giaph->loaip}} - {{$giaph->qccl}}</td>
                         <td>{{$giaph->sohieu}}</td>
-                        <td>{{number_format($giaph->mucgiakk)}}</td>
+                        <td align="right" >{{number_format($giaph->mucgiakk)}}</td>
                         <td>{{$giaph->ghichu}}</td>
                     </tr>
                     @endforeach

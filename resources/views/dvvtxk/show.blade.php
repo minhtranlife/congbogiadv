@@ -62,7 +62,7 @@
                         <th>Quy cách chất lượng</th>
                         <th>Đơn vị tính</th>
                         <th>Mức giá kê khai</th>
-                        <th>Mức giá hành lý vượt quy định</th>
+                        <th>Mức giá hành lý<br> vượt quy định</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -71,8 +71,8 @@
                         <td>{{$giaxk->tendichvu}}</td>
                         <td>{{$giaxk->qccl}}</td>
                         <td>{{$giaxk->dvt}}</td>
-                        <td>{{number_format($giaxk->giakk)}}</td>
-                        <td>{{number_format($giaxk->giahl)}}</td>
+                        <td align="right">{{number_format($giaxk->giakk)}}</td>
+                        <td align="right">{{number_format($giaxk->giahl)}}</td>
                     </tr>
                     @endforeach
                     </tbody>

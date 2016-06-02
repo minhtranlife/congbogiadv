@@ -68,7 +68,7 @@
                     <tr>
                         <td>{{$giaxk->loaixe}}</td>
                         <td>{{$giaxk->tendichvu}}</td>
-                        <td>{{number_format($giaxk->giakk)}}</td>
+                        <td align="right">{{number_format($giaxk->giakk)}}</td>
                     </tr>
                     @endforeach
                     </tbody>
