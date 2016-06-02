@@ -35,7 +35,7 @@
                              src="http://placehold.it/750x500" alt="750x450">
                     @endif
                 </a>
-                <h3><a href="{{url('dn-dich-vu-van-tai-xe-khach/'.$dn->masothue)}}">{{$dn->tendonvi}}</a></h3>
+                <h5><a href="{{url('dn-dich-vu-van-tai-xe-khach/'.$dn->masothue)}}">{{$dn->tendonvi}}</a></h5>
                 <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dn->diachi}}</p>
             </div>
