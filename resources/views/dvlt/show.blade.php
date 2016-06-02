@@ -100,10 +100,10 @@
                 <table class="table table-bordered">
                     <thead>
                     <tr>
-                        <th>Loại phòng - Quy cách chất lượng</th>
-                        <th>Số hiệu phòng</th>
-                        <th>Mức giá kê khai</th>
-                        <th>Ghi chú</th>
+                        <th width="35%">Loại phòng - Quy cách chất lượng</th>
+                        <th width="35%">Số hiệu phòng</th>
+                        <th width="10%">Mức giá kê khai</th>
+                        <th width="10%">Ghi chú</th>
                     </tr>
                     </thead>
                     <tbody>

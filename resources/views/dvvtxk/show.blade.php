@@ -58,11 +58,11 @@
                 <table class="table table-bordered">
                     <thead>
                     <tr>
-                        <th>Tên dịch vụ</th>
-                        <th>Quy cách chất lượng</th>
-                        <th>Đơn vị tính</th>
-                        <th>Mức giá kê khai</th>
-                        <th>Mức giá hành lý<br> vượt quy định</th>
+                        <th width="30%">Tên dịch vụ</th>
+                        <th width="30%">Quy cách chất lượng</th>
+                        <th width="5%">Đơn vị tính</th>
+                        <th width="10%">Mức giá kê khai</th>
+                        <th width="10%">Mức giá hành lý<br> vượt quy định</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -70,7 +70,7 @@
                     <tr>
                         <td>{{$giaxk->tendichvu}}</td>
                         <td>{{$giaxk->qccl}}</td>
-                        <td>{{$giaxk->dvt}}</td>
+                        <td align="center">{{$giaxk->dvt}}</td>
                         <td align="right">{{number_format($giaxk->giakk)}}</td>
                         <td align="right">{{number_format($giaxk->giahl)}}</td>
                     </tr>
