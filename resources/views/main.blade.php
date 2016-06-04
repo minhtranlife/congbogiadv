@@ -28,6 +28,28 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{{url('js/bootstrap.min.js')}}"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+                $('#back-to-top').tooltip('hide');
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 400);
+                return false;
+            });
+
+            $('#back-to-top').tooltip('show');
+
+        });
+    </script>
 
     @yield('custom-script')
     <!--[endif]-->
@@ -103,6 +125,14 @@
 <div class="container">
 
     @yield('content')
+    <a id="back-to-top" style="cursor: pointer;
+                                    position: fixed;
+                                    bottom: 20px;
+                                    right: 20px;
+                                    display:none;"
+       href="#" class="btn btn-primary" role="button"
+       title="Quay lại đầu trang" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-menu-up"></span>
+    </a>
     <!-- /.row -->
     <hr>
 
