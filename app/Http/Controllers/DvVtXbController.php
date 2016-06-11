@@ -15,7 +15,7 @@ class DvVtXbController extends Controller
 
     public function index()
     {
-        $itemsPerPage = 8;
+        $itemsPerPage = 4;
 
         $dnvt = DonViDvVt::where('dvxb',1)
             ->paginate($itemsPerPage);

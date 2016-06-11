@@ -14,7 +14,7 @@ class DvLtController extends Controller
 {
     public function index($hang)
     {
-        $itemsPerPage = 8;
+        $itemsPerPage = 4;
 
         $ksrd = CsKdDvLt::where('loaihang',$hang)
             ->paginate($itemsPerPage);
