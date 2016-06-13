@@ -130,7 +130,7 @@
                                     bottom: 20px;
                                     right: 20px;
                                     display:none;"
-       href="#" class="btn btn-primary" role="button"
+       href="#" class="btn btn-primary active" role="button"
        title="Quay lại đầu trang" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-menu-up"></span>
     </a>
     <!-- /.row -->
@@ -141,7 +141,7 @@
     <footer>
         <div class="row">
             <div class="col-lg-12">
-                <p>2016 © LifeSoft - Tiện ích hơn - Hiệu quả hơn</p>
+                <p align="right">2016 © LifeSoft  <a href="" style="color:#5b9bd1">Tiện ích hơn - Hiệu quả hơn</a></p>
             </div>
         </div>
         <!-- /.row -->

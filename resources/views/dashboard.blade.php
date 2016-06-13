@@ -86,6 +86,7 @@
             </p-->
         </div>
         @endforeach
+            <p align="right"><a href="{{url('dich-vu-luu-tru/ks-3-sao')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
     </div>
     <!-- /.row -->
 
@@ -117,6 +118,7 @@
             <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnxk->diachi}}</p>
         </div>
         @endforeach
+            <p align="right"><a href="{{url('dich-vu-van-tai-xe-khach')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
     </div>
     <!-- /.row -->
     <!-- Page Heading -->
@@ -143,10 +145,11 @@
                     @endif
                 </a>
                 <h3><a href="{{url('dn-dich-vu-van-tai-xe-buyt/'.$dnxb->masothue)}}">{{$dnxb->tendonvi}}</a></h3>
-                <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
+                <p style="color: #888; font-size: .85em;">Vận tải xe buýt</p>
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnxb->diachi}}</p>
             </div>
         @endforeach
+            <p align="right"><a href="{{url('dich-vu-van-tai-xe-buyt')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
     </div>
     <!-- /.row -->
 
@@ -174,10 +177,11 @@
                     @endif
                 </a>
                 <h3><a href="{{url('dn-dich-vu-van-tai-xe-taxi/'.$dntx->masothue)}}">{{$dntx->tendonvi}}</a></h3>
-                <p style="color: #888; font-size: .85em;">Vận tải xe khách</p>
+                <p style="color: #888; font-size: .85em;">Vận tải xe taxi</p>
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dntx->diachi}}</p>
             </div>
         @endforeach
+            <p align="right"><a href="{{url('dich-vu-van-tai-xe-taxi')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
     </div>
     <!-- /.row -->
 
@@ -209,6 +213,7 @@
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnch->diachi}}</p>
             </div>
         @endforeach
+            <p align="right"><a href="{{url('dich-vu-van-tai-cho-hang')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
     </div>
 
 
