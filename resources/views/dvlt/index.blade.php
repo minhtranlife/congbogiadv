@@ -1,6 +1,7 @@
 @extends('main')
 
 @section('custom-style')
+    <link type="text/css" rel="stylesheet" href="{{url('vendors/select2/select2-madmin.css')}}">
 @stop
 
 
@@ -15,15 +16,42 @@
                 //var url = current_path_url;
                 window.location.href = url;
             });
+
+
+        })
+        $(function(){
+
+            $('#select_cskd').change(function() {
+                var hang = $('#select_hang').val();
+                var cskd = $('#select_cskd').val();
+                var url = '/dich-vu-luu-tru/ks-'+hang+'-sao/'+cskd;
+
+                //var url = current_path_url;
+                window.location.href = url;
+            });
+
+
         })
     </script>
+    <script src="{{url('vendors/select2/select2.min.js')}}"></script>
+    <script src="{{url('vendors/bootstrap-select/bootstrap-select.min.js')}}"></script>
+    <script src="{{url('vendors/multi-select/js/jquery.multi-select.js')}}"></script>
+    <script src="{{url('js/ui-dropdown-select.js')}}"></script>
 @stop
 
 @section('content')
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Dịch vụ lưu trú
-                <select name="select_hang" id="select_hang">
+            </h1>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Loại hạng</label>
+                <select class="form-control" name="select_hang" id="select_hang" >
                     <option value="1" {{($hang == 1) ? 'selected' : ''}}>1 sao</option>
                     <option value="1.5" {{($hang == 1.5) ? 'selected' : ''}}>1.5 sao</option>
                     <option value="2" {{($hang == 2) ? 'selected' : ''}}>2 sao</option>
@@ -34,8 +62,20 @@
                     <option value="4.5" {{($hang == 4.5) ? 'selected' : ''}}>4.5 sao</option>
                     <option value="5" {{($hang == 5) ? 'selected' : ''}}>5 sao</option>
                 </select>
-            </h1>
-
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Tên cơ sở kinh doanh</label>
+                <!--div class="col-md-6 col-sm-6 col-xs-6"-->
+                    <select class="select2-size form-control select2-offscreen" tabindex="-1" title="" id="select_cskd" name="select_cskd">
+                        <option value="all" selected>-- Nhập thông tin cơ sở kinh doanh --</option>
+                        @foreach($hotel as $ks)
+                            <option value="{{$ks->macskd}}" {{($ks->macskd == $maks) ? 'selected' : ''}}>{{$ks->tencskd}}</option>
+                        @endforeach
+                    </select>
+                <!--/div-->
+            </div>
         </div>
     </div>
 
@@ -43,11 +83,10 @@
     <!-- /.row -->
 
     <!-- Projects Row -->
+    <div id="ttcskd">
     @if(count($ksrd)!=0)
     <div class="row">
-
         @foreach($ksrd as $ks)
-
             <div class="col-md-3 portfolio-item">
                 <a href="{{url('cskd-dich-vu-luu-tru/'.$ks->macskd)}}">
                     @if($ks->toado != null)
@@ -109,6 +148,11 @@
             </div>
         @endforeach
     </div>
+    <div class="row text-center">
+        <div class="col-lg-12">
+            {!! $ksrd->render() !!}
+        </div>
+    </div>
     @else
         <div class="row text-center">
             <div class="col-lg-12">
@@ -116,14 +160,12 @@
             </div>
         </div>
     @endif
+    </div>
     <!-- /.row -->
 
     <!-- Pagination -->
-    <div class="row text-center">
-        <div class="col-lg-12">
-            {!! $ksrd->render() !!}
-        </div>
-    </div>
+
     <!-- /.row -->
+
 
 @stop

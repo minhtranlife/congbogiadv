@@ -18,10 +18,15 @@ class DvVtXtxController extends Controller
         $itemsPerPage = 4;
 
         $dnvt = DonViDvVt::where('dvxtx',1)
+            ->where('trangthai','Kích hoạt')
             ->paginate($itemsPerPage);
-
+        $vantai = DonViDvVt::where('dvxtx',1)
+            ->where('trangthai','Kích hoạt')
+            ->get();
         return view('dvvtxtx.index')
             ->with('dnvt',$dnvt)
+            ->with('vantai',$vantai)
+            ->with('ma','all')
             ->with('pageTitle','Danh sách doanh nghiệp cung cấp dịch vụ vận tải xe taxi');
     }
 
@@ -53,5 +58,24 @@ class DvVtXtxController extends Controller
             ->with('pageTitle','Thông tin doanh nghiệp cung cấp dịch vụ vận tải taxi');
     }
 
+    public function view($ma)
+    {
+        $itemsPerPage = 4;
+        if($ma == 'all')
+            $dnvt = DonViDvVt::where('dvxtx',1)
+                ->where('trangthai','Kích hoạt')
+                ->paginate($itemsPerPage);
+        else
+            $dnvt = DonViDvVt::where('masothue',$ma)
+                ->paginate($itemsPerPage);
+        $vantai = DonViDvVt::where('dvxtx',1)
+            ->where('trangthai','Kích hoạt')
+            ->get();
+        return view('dvvtxtx.index')
+            ->with('dnvt',$dnvt)
+            ->with('vantai',$vantai)
+            ->with('ma',$ma)
+            ->with('pageTitle','Danh sách doanh nghiệp cung cấp dịch vụ vận tải xe taxi');
+    }
 
 }

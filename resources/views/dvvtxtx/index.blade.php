@@ -1,10 +1,29 @@
 @extends('main')
 
 @section('custom-style')
+    <link type="text/css" rel="stylesheet" href="{{url('vendors/select2/select2-madmin.css')}}">
 @stop
 
 
 @section('custom-script')
+    <script src="{{url('vendors/select2/select2.min.js')}}"></script>
+    <script src="{{url('vendors/bootstrap-select/bootstrap-select.min.js')}}"></script>
+    <script src="{{url('vendors/multi-select/js/jquery.multi-select.js')}}"></script>
+    <script src="{{url('js/ui-dropdown-select.js')}}"></script>
+    <script>
+        $(function(){
+
+            $('#select_ma').change(function() {
+                var ma = $('#select_ma').val();
+                var url = '/dich-vu-van-tai-xe-taxi/'+ma;
+
+                //var url = current_path_url;
+                window.location.href = url;
+            });
+
+
+        })
+    </script>
 @stop
 
 @section('content')
@@ -13,6 +32,21 @@
             <h1 class="page-header">Dịch vụ vận tải xe taxi
             </h1>
 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Tên cơ sở kinh doanh</label>
+                <!--div class="col-md-6 col-sm-6 col-xs-6"-->
+                <select class="select2-size form-control select2-offscreen" tabindex="-1" title="" id="select_ma" name="select_ma">
+                    <option value="all" selected>-- Nhập thông tin doanh nghiệp --</option>
+                    @foreach($vantai as $dn)
+                        <option value="{{$dn->masothue}}" {{($dn->masothue == $ma) ? 'selected' : ''}}>{{$dn->tendonvi}}</option>
+                    @endforeach
+                </select>
+                <!--/div-->
+            </div>
         </div>
     </div>
 
@@ -41,6 +75,11 @@
             </div>
         @endforeach
     </div>
+    <div class="row text-center">
+        <div class="col-lg-12">
+            {!! $dnvt->render() !!}
+        </div>
+    </div>
     @else
         <div class="row text-center">
             <div class="col-lg-12">
@@ -51,11 +90,7 @@
     <!-- /.row -->
 
     <!-- Pagination -->
-    <div class="row text-center">
-        <div class="col-lg-12">
-            {!! $dnvt->render() !!}
-        </div>
-    </div>
+
     <!-- /.row -->
 
 @stop

@@ -15,17 +15,18 @@ class DvLtController extends Controller
     public function index($hang)
     {
         $itemsPerPage = 4;
-
-        $ksrd = CsKdDvLt::where('loaihang',$hang)
+            $ksrd = CsKdDvLt::where('loaihang',$hang)
             ->paginate($itemsPerPage);
 
-        //dd($ksrd);
+        $hotel = CsKdDvLt::where('loaihang',$hang)
+            ->get();
 
-        //dd(getAddMap('86A Trần Phú- Thành Phố Nha Trang'));
         return view('dvlt.index')
             //->withCustomers($ksrd)
             ->with('ksrd',$ksrd)
             ->with('hang',$hang)
+            ->with('hotel',$hotel)
+            ->with('maks','all')
             ->with('pageTitle','Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú');
     }
 
@@ -53,6 +54,26 @@ class DvLtController extends Controller
             ->with('modelkkct',$modelkkct)
             ->with('modelk',$modelk)
             ->with('pageTitle','Thông tin cơ sở kinh doanh');
+    }
+
+    public function view($hang,$cskd){
+        $itemsPerPage = 4;
+        if($cskd == 'all')
+            $ksrd = CsKdDvLt::where('loaihang',$hang)
+                ->paginate($itemsPerPage);
+        else
+            $ksrd = CsKdDvLt::where('macskd',$cskd)
+            ->paginate(1);
+
+        $hotel = CsKdDvLt::where('loaihang',$hang)
+            ->get();
+
+        return view('dvlt.index')
+            ->with('ksrd',$ksrd)
+            ->with('hang',$hang)
+            ->with('hotel',$hotel)
+            ->with('maks',$cskd)
+            ->with('pageTitle','Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú');
     }
 
 }
