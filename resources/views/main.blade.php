@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,6 +52,15 @@
 
     @yield('custom-script')
     <!--[endif]-->
+    <style>
+        body  {
+            background-color: #f2f2f2;
+        }
+        #container{
+            background-color: #fff;
+
+        }
+    </style>
 
 </head>
 
@@ -122,7 +130,7 @@
 </nav>
 
 <!-- Page Content -->
-<div class="container">
+<div class="container" id="container">
 
     @yield('content')
     <a id="back-to-top" style="cursor: pointer;

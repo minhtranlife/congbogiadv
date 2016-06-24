@@ -86,7 +86,9 @@
             </p-->
         </div>
         @endforeach
-            <p align="right"><a href="{{url('dich-vu-luu-tru/ks-3-sao')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
+            <div class="col-lg-12">
+                <p align="right"><a href="{{url('dich-vu-luu-tru/ks-3-sao')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
+            </div>
     </div>
     <!-- /.row -->
 
@@ -118,7 +120,9 @@
             <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnxk->diachi}}</p>
         </div>
         @endforeach
-            <p align="right"><a href="{{url('dich-vu-van-tai-xe-khach')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
+            <div class="col-lg-12">
+                <p align="right"><a href="{{url('dich-vu-van-tai-xe-khach')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
+            </div>
     </div>
     <!-- /.row -->
     <!-- Page Heading -->
@@ -149,7 +153,9 @@
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnxb->diachi}}</p>
             </div>
         @endforeach
-            <p align="right"><a href="{{url('dich-vu-van-tai-xe-buyt')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
+            <div class="col-lg-12">
+                <p align="right"><a href="{{url('dich-vu-van-tai-xe-buyt')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
+            </div>
     </div>
     <!-- /.row -->
 
@@ -181,7 +187,9 @@
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dntx->diachi}}</p>
             </div>
         @endforeach
+        <div class="col-lg-12">
             <p align="right"><a href="{{url('dich-vu-van-tai-xe-taxi')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
+        </div>
     </div>
     <!-- /.row -->
 
@@ -213,7 +221,9 @@
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dnch->diachi}}</p>
             </div>
         @endforeach
-            <p align="right"><a href="{{url('dich-vu-van-tai-cho-hang')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
+            <div class="col-lg-12">
+                <p align="right"><a href="{{url('dich-vu-van-tai-cho-hang')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
+            </div>
     </div>
 
 
