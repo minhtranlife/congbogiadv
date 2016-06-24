@@ -18,6 +18,8 @@ Route::get('/', 'HomeController@index');
 Route::get('cskd-dich-vu-luu-tru/{macskd}','DvLtController@show');
 Route::get('dich-vu-luu-tru/ks-{hang}-sao','DvLtController@index');
 Route::get('dich-vu-luu-tru/ks-{hang}-sao/{cskd}','DvLtController@view');
+Route::get('cskd-dich-vu-luu-tru/{macskd}/view','DvLtController@viewct');
+Route::get('/ajax/getTTph/','DvLtController@getTTph');
 
     //Dịch vụ vận tải xe khách
 Route::get('dn-dich-vu-van-tai-xe-khach/{masothue}','DvVtXkController@show');

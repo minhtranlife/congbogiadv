@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CbKkGDvLt;
 use App\CsKdDvLt;
+use App\KkGDvLt;
 use App\KkGDvLtCt;
 use Illuminate\Http\Request;
 
@@ -74,6 +75,53 @@ class DvLtController extends Controller
             ->with('hotel',$hotel)
             ->with('maks',$cskd)
             ->with('pageTitle','Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú');
+    }
+
+    public function viewct($macskd){
+        $model = CsKdDvLt::where('macskd',$macskd)
+            ->first();
+        $itemsPerPage = 10;
+        $modelct = KkGDvLt::where('macskd',$macskd)
+            ->orderBy('id', 'esc')
+            ->where('trangthai','Duyệt')
+            ->paginate($itemsPerPage);
+        return view('dvlt.view')
+            ->with('model',$model)
+            ->with('modelct',$modelct)
+            ->with('pageTitle','Giá phòng cơ sở kinh doanh');
+    }
+
+    public function getTTph(Request $request){
+        $result = array(
+            'status' => 'fail',
+            'message' => 'error',
+        );
+
+        $inputs = $request->all();
+
+        if(isset($inputs['mahs'])){
+
+            $model = KkGDvLtCt::where('mahs',$inputs['mahs'])
+                ->get();
+
+            $result['message'] = '<tbody id="ttctgia">';
+            if(count($model)>0) {
+                foreach ($model as $key=>$tt) {
+                    $result['message'] .= '<tr>';
+                    $result['message'] .= '<td style="text-align: center">' . ($key +1). '</td>';
+                    $result['message'] .= '<td>' . $tt->loaip.' - '.$tt->qccl. '</td>';
+                    $result['message'] .= '<td>' . $tt->sohieu. '</td>';
+                    $result['message'] .= '<td>' . number_format($tt->mucgiakk) . '</td>';
+                    $result['message'] .= '<td>' . $tt->ghichu . '</td>';
+                    $result['message'] .= '</tr>';
+                }
+            }
+            $result['message'] .= '</tbody>';
+            $result['status'] = 'success';
+
+        }
+
+        die(json_encode($result));
     }
 
 }

@@ -86,6 +86,9 @@
                 <li><i class="glyphicon glyphicon-earphone"></i> {{$model->telkd}}</li>
                 <!--li><i class="glyphicon glyphicon-envelope"></i> {{$model->faxcskd}}</li-->
             </ul>
+            @if($modelkkct != '')
+                <a href="{{url('cskd-dich-vu-luu-tru/'.$model->macskd.'/view')}}" class="btn btn-info active"><i class="glyphicon glyphicon-search"></i> Lịch sử giá phòng kê khai</a>
+            @endif
             <!--button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onload="initialize()">Open Modal</button-->
         </div>
     </div>
@@ -99,7 +102,7 @@
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
-                    <tr>
+                    <tr style="background: #F5F5F5">
                         <th width="35%">Loại phòng - Quy cách chất lượng</th>
                         <th width="35%">Số hiệu phòng</th>
                         <th width="10%">Mức giá kê khai</th>
@@ -119,6 +122,7 @@
                 </table>
             </div>
         </div>
+
     </div>
     @else
         <h3>Cơ sở kinh doanh dịch vụ lưu trú chưa có kê khai giá gần nhất cho {{(getGeneralConfigs()['tendonvi'])}}</h3>
