@@ -57,15 +57,17 @@
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
-                    <tr>
-                        <th>Loại xe</th>
-                        <th>Mô tả dịch vụ</th>
-                        <th>Mức giá kê khai</th>
+                    <tr style="background: #F5F5F5">
+                        <th width="2%" style="text-align: center">STT</th>
+                        <th style="text-align: center" width="40">Loại xe</th>
+                        <th style="text-align: center" width="40">Mô tả dịch vụ</th>
+                        <th style="text-align: center" width="10%">Mức giá kê khai</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($modelkkct as $giaxk)
+                    @foreach($modelkkct as $key=>$giaxk)
                     <tr>
+                        <td style="text-align: center">{{($key + 1)}}</td>
                         <td>{{$giaxk->loaixe}}</td>
                         <td>{{$giaxk->tendichvu}}</td>
                         <td align="right">{{number_format($giaxk->giakk)}}</td>

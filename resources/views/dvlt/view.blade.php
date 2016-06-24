@@ -71,10 +71,10 @@
                         <thead>
                         <tr style="background: #F5F5F5">
                             <th width="2%">STT</th>
-                            <th style="text-align: center">Loại phòng</th>
-                            <th style="text-align: center">Số hiệu</th>
-                            <th style="text-align: center">Mức giá kê khai</th>
-                            <th style="text-align: center">Ghi chú</th>
+                            <th style="text-align: center" width="30%">Loại phòng</th>
+                            <th style="text-align: center" width="40%">Số hiệu</th>
+                            <th style="text-align: center" width="10%">Mức giá kê khai</th>
+                            <th style="text-align: center" width="15%">Ghi chú</th>
                         </tr>
                         </thead>
                         <tbody id="ttctgia">

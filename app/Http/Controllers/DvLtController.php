@@ -111,7 +111,7 @@ class DvLtController extends Controller
                     $result['message'] .= '<td style="text-align: center">' . ($key +1). '</td>';
                     $result['message'] .= '<td>' . $tt->loaip.' - '.$tt->qccl. '</td>';
                     $result['message'] .= '<td>' . $tt->sohieu. '</td>';
-                    $result['message'] .= '<td>' . number_format($tt->mucgiakk) . '</td>';
+                    $result['message'] .= '<td style="text-align: right">' . number_format($tt->mucgiakk) . '</td>';
                     $result['message'] .= '<td>' . $tt->ghichu . '</td>';
                     $result['message'] .= '</tr>';
                 }

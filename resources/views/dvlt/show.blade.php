@@ -103,15 +103,17 @@
                 <table class="table table-bordered">
                     <thead>
                     <tr style="background: #F5F5F5">
-                        <th width="35%">Loại phòng - Quy cách chất lượng</th>
-                        <th width="35%">Số hiệu phòng</th>
-                        <th width="10%">Mức giá kê khai</th>
-                        <th width="10%">Ghi chú</th>
+                        <th style="text-align: center" width="2%">STT</th>
+                        <th width="30%" style="text-align: center">Loại phòng - Quy cách chất lượng</th>
+                        <th width="40%" style="text-align: center">Số hiệu phòng</th>
+                        <th width="7%" style="text-align: center">Mức giá kê khai</th>
+                        <th width="15%" style="text-align: center">Ghi chú</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($modelkkct as $giaph)
+                    @foreach($modelkkct as $key=>$giaph)
                     <tr>
+                        <td style="text-align: center">{{($key + 1)}}</td>
                         <td>{{$giaph->loaip}} - {{$giaph->qccl}}</td>
                         <td>{{$giaph->sohieu}}</td>
                         <td align="right" >{{number_format($giaph->mucgiakk)}}</td>

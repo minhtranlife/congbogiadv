@@ -57,20 +57,22 @@
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
-                    <tr>
-                        <th>Mô tả dịch vụ</th>
-                        <th>Quy cách chất lượng</th>
-                        <th>Mức giá vé kê khai</th>
-                        <th>Mức giá vé tháng kê khai</th>
+                    <tr style="background: #F5F5F5">
+                        <th style="text-align: center" width="2%">STT</th>
+                        <th style="text-align: center">Mô tả dịch vụ</th>
+                        <th style="text-align: center">Quy cách chất lượng</th>
+                        <th style="text-align: center">Mức giá vé kê khai</th>
+                        <th style="text-align: center">Mức giá vé tháng kê khai</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($modelkkct as $giaxb)
+                    @foreach($modelkkct as $key=>$giaxb)
                     <tr>
+                        <td style="text-align: center">{{($key + 1)}}</td>
                         <td>{{$giaxb->tendichvu}}</td>
                         <td>{{$giaxb->qccl}}</td>
-                        <td>{{number_format($giaxb->giakkluot)}}</td>
-                        <td>{{number_format($giaxb->giakkthang)}}</td>
+                        <td style="text-align: right">{{number_format($giaxb->giakkluot)}}</td>
+                        <td style="text-align: right">{{number_format($giaxb->giakkthang)}}</td>
                     </tr>
                     @endforeach
                     </tbody>

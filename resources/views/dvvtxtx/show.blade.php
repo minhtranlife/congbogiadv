@@ -57,17 +57,19 @@
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
-                    <tr>
-                        <th>Tên dịch vụ</th>
-                        <th>Quy cách chất lượng</th>
-                        <th>Đơn vị tính</th>
-                        <th>Mức giá kê khai</th>
-                        <th>Mức giá hành lý<br> vượt quy định</th>
+                    <tr style="background: #F5F5F5">
+                        <th style="text-align: center" width="2%">STT</th>
+                        <th style="text-align: center">Tên dịch vụ</th>
+                        <th style="text-align: center">Quy cách chất lượng</th>
+                        <th style="text-align: center">Đơn vị tính</th>
+                        <th style="text-align: center">Mức giá kê khai</th>
+                        <th style="text-align: center">Mức giá hành lý<br> vượt quy định</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($modelkkct as $giaxk)
+                    @foreach($modelkkct as $key=>$giaxk)
                     <tr>
+                        <td style="text-align: center">{{($key + 1)}}</td>
                         <td>{{$giaxk->tendichvu}}</td>
                         <td>{{$giaxk->qccl}}</td>
                         <td>{{$giaxk->dvt}}</td>
