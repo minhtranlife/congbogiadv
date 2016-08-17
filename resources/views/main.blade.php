@@ -142,20 +142,25 @@
        title="Quay lại đầu trang" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-menu-up"></span>
     </a>
     <!-- /.row -->
-    <hr>
 
 
     <!-- Footer -->
-    <footer>
+    <!--footer>
         <div class="row">
             <div class="col-lg-12">
                 <p align="right">2016 © LifeSoft  <a href="" style="color:#5b9bd1">Tiện ích hơn - Hiệu quả hơn</a></p>
             </div>
         </div>
-        <!-- /.row -->
-    </footer>
+    </footer-->
 
 </div>
+
+<footer class="footer" style="bottom:0;width:100%;">
+    <div class="col-lg-12">
+        <p align="center">2016 © LifeSoft  <a href="" style="color:#5b9bd1">Tiện ích hơn - Hiệu quả hơn</a></p>
+    </div>
+</footer>
+
 <!-- /.container -->
 
 
