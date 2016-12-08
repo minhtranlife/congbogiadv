@@ -49,4 +49,16 @@ function bodau($str)
     return $str;
 }
 
+function getttdvvt($perm=null,$module = null, $action = null){
+    if($perm == ''){
+        return false;
+    }else {
+        $permission = json_decode($perm,true);
+        if (isset($permission[$module][$action]) && $permission[$module][$action] == 1) {
+            return true;
+        } else
+            return false;
+    }
+}
+
 ?>

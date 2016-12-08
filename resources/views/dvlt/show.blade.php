@@ -22,7 +22,6 @@
     <!-- Projects Row -->
     <div class="row">
         <div class="col-md-6">
-            <!--img class="img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?center={{getAddMap($model->diachikd)}}&zoom=17&size=750x450" alt=""-->
             @if($model->toado != null)
                 <img class="img-responsive"
                      src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
@@ -82,6 +81,9 @@
             <!--p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p-->
             <h3>Thông tin liên hệ</h3>
             <ul class="contact-info">
+                @if($model->link !='')
+                <li><i class="glyphicon glyphicon-cloud-upload"></i><a href="http://{{$model->link}}" target="_blank"> Trang chủ</a> </li>
+                @endif
                 <li><i class="glyphicon glyphicon-map-marker"></i> {{$model->diachikd}}</li>
                 <li><i class="glyphicon glyphicon-earphone"></i> {{$model->telkd}}</li>
                 <!--li><i class="glyphicon glyphicon-envelope"></i> {{$model->faxcskd}}</li-->
