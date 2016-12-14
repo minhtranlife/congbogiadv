@@ -65,6 +65,7 @@
                         <th style="text-align: center">Tên dịch vụ</th>
                         <th style="text-align: center">Quy cách chất lượng</th>
                         <th style="text-align: center">Đơn vị tính</th>
+                        <th style="text-align: center" width="10%">Mức giá kê khai liền kề</th>
                         <th style="text-align: center">Mức giá kê khai</th>
                         <th style="text-align: center">Mức giá hành lý<br> vượt quy định</th>
                     </tr>
@@ -76,6 +77,7 @@
                         <td>{{$giaxk->tendichvu}}</td>
                         <td>{{$giaxk->qccl}}</td>
                         <td>{{$giaxk->dvt}}</td>
+                        <td align="right">{{number_format($giaxk->giakklk)}}</td>
                         <td align="right">{{number_format($giaxk->giakk)}}</td>
                         <td align="right">{{number_format($giaxk->giahl)}}</td>
                     </tr>

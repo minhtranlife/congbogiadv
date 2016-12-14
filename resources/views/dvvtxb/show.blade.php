@@ -64,8 +64,11 @@
                         <th style="text-align: center" width="2%">STT</th>
                         <th style="text-align: center">Mô tả dịch vụ</th>
                         <th style="text-align: center">Quy cách chất lượng</th>
+                        <th style="text-align: center" width="10%">Mức giá kê khai liền kề</th>
                         <th style="text-align: center">Mức giá vé kê khai</th>
+                        <th style="text-align: center" width="10%">Mức giá tháng kê khai liền kề</th>
                         <th style="text-align: center">Mức giá vé tháng kê khai</th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -74,7 +77,9 @@
                         <td style="text-align: center">{{($key + 1)}}</td>
                         <td>{{$giaxb->tendichvu}}</td>
                         <td>{{$giaxb->qccl}}</td>
+                        <td style="text-align: right">{{number_format($giaxb->giakklkluot)}}</td>
                         <td style="text-align: right">{{number_format($giaxb->giakkluot)}}</td>
+                        <td style="text-align: right">{{number_format($giaxb->giakklkthang)}}</td>
                         <td style="text-align: right">{{number_format($giaxb->giakkthang)}}</td>
                     </tr>
                     @endforeach

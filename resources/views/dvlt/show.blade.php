@@ -108,6 +108,7 @@
                         <th style="text-align: center" width="2%">STT</th>
                         <th width="30%" style="text-align: center">Loại phòng - Quy cách chất lượng</th>
                         <th width="40%" style="text-align: center">Số hiệu phòng</th>
+                        <th width="7%" style="text-align: center">Mức giá liền kề</th>
                         <th width="7%" style="text-align: center">Mức giá kê khai</th>
                         <th width="15%" style="text-align: center">Ghi chú</th>
                     </tr>
@@ -118,6 +119,7 @@
                         <td style="text-align: center">{{($key + 1)}}</td>
                         <td>{{$giaph->loaip}} - {{$giaph->qccl}}</td>
                         <td>{{$giaph->sohieu}}</td>
+                        <td align="right" >{{number_format($giaph->mucgialk)}}</td>
                         <td align="right" >{{number_format($giaph->mucgiakk)}}</td>
                         <td>{{$giaph->ghichu}}</td>
                     </tr>

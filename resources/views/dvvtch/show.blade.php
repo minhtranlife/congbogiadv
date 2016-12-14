@@ -64,6 +64,7 @@
                         <th width="2%" style="text-align: center">STT</th>
                         <th style="text-align: center" width="40">Loại xe</th>
                         <th style="text-align: center" width="40">Mô tả dịch vụ</th>
+                        <th style="text-align: center" width="10%">Mức giá kê khai liền kề</th>
                         <th style="text-align: center" width="10%">Mức giá kê khai</th>
                     </tr>
                     </thead>
@@ -73,6 +74,7 @@
                         <td style="text-align: center">{{($key + 1)}}</td>
                         <td>{{$giaxk->loaixe}}</td>
                         <td>{{$giaxk->tendichvu}}</td>
+                        <td align="right">{{number_format($giaxk->giakklk)}}</td>
                         <td align="right">{{number_format($giaxk->giakk)}}</td>
                     </tr>
                     @endforeach
