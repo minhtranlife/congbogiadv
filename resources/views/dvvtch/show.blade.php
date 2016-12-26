@@ -27,7 +27,7 @@
                             maptype=roadmap&amp;markers=color:red|{{$model->toado}}" alt="">
             @else
                 <img class="img-responsive"
-                     src="http://placehold.it/750x500" alt="750x450">
+                     src="{{url('images/default.png')}}" alt="750x450">
             @endif
         </div>
         <div class="col-md-6">
@@ -84,12 +84,12 @@
         </div>
     </div>
     @else
-        <h3>Đơn vị cung cấp dịch vụ vận tải chở hàng chưa có kê khai giá gần nhất cho {{(getGeneralConfigs()['tendonvi'])}}</h3>
+        <h3>Đơn vị cung cấp dịch vụ vận tải khác chưa có kê khai giá gần nhất cho {{(getGeneralConfigs()['tendonvi'])}}</h3>
     @endif
 
     <div class="row">
         <div class="col-lg-12">
-            <h3 class="page-header">Đơn vị cung cấp dịch vụ vận tải chở hàng cùng loại</h3>
+            <h3 class="page-header">Đơn vị cung cấp dịch vụ vận tải khác cùng loại</h3>
         </div>
         @foreach($modelk as $dnk)
         <div class="col-md-3 portfolio-item">
@@ -100,7 +100,7 @@
                             maptype=roadmap&amp;markers=color:red|{{$dnk->toado}}" alt="">
                 @else
                     <img class="img-responsive"
-                         src="http://placehold.it/750x500" alt="750x450">
+                         src="{{url('images/default.png')}}" alt="750x450">
                 @endif
             </a>
             <h3><a href="{{url('dn-dich-vu-van-tai-cho-hang/'.$dnk->masothue)}}">{{$dnk->tendonvi}}</a></h3>

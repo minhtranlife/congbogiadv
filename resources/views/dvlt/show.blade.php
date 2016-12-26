@@ -146,7 +146,7 @@
                             maptype=roadmap&amp;markers=color:red|{{$ksk->toado}}" alt="">
                 @else
                     <img class="img-responsive"
-                         src="http://placehold.it/750x500" alt="750x450">
+                         src="{{url('images/default.png')}}" alt="750x450">
                 @endif
             </a>
             <h3><a href="{{url('cskd-dich-vu-luu-tru/'.$ksk->macskd)}}">{{$ksk->tencskd}}</a></h3>

@@ -27,7 +27,7 @@
                             maptype=roadmap&amp;markers=color:red|{{$model->toado}}" alt="">
             @else
                 <img class="img-responsive"
-                     src="http://placehold.it/750x500" alt="750x450">
+                     src="{{url('images/default.png')}}" alt="750x450">
             @endif
         </div>
         <div class="col-md-6">
@@ -104,7 +104,7 @@
                             maptype=roadmap&amp;markers=color:red|{{$dnk->toado}}" alt="">
                 @else
                     <img class="img-responsive"
-                         src="http://placehold.it/750x500" alt="750x450">
+                         src="{{url('images/default.png')}}" alt="750x450">
                 @endif
             </a>
             <h3><a href="{{url('dn-dich-vu-van-tai-xe-taxi/'.$dnk->masothue)}}">{{$dnk->tendonvi}}</a></h3>

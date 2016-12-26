@@ -29,7 +29,7 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Dịch vụ vận tải chở hàng
+            <h1 class="page-header">Dịch vụ vận tải khác
             </h1>
         </div>
     </div>
@@ -69,7 +69,7 @@
                     @endif
                 </a>
                 <h3><a href="{{url('dn-dich-vu-van-tai-cho-hang/'.$dn->masothue)}}">{{$dn->tendonvi}}</a></h3>
-                <p style="color: #888; font-size: .85em;">Vận tải chở hàng</p>
+                <p style="color: #888; font-size: .85em;">Vận tải khác</p>
                 <p><i class="glyphicon glyphicon-map-marker"></i> {{$dn->diachi}}</p>
             </div>
         @endforeach

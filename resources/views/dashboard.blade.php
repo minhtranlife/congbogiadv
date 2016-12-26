@@ -31,7 +31,7 @@
                             maptype=roadmap&amp;markers=color:red|{{$ks->toado}}" alt="">
                 @else
                     <img class="img-responsive"
-                         src="http://placehold.it/750x500" alt="750x450">
+                         src="{{url('images/default.png')}}" alt="750x450">
                 @endif
             </a>
             <h3><a href="{{'cskd-dich-vu-luu-tru/'.$ks->macskd}}">{{$ks->tencskd}}</a></h3>
@@ -112,7 +112,7 @@
                             maptype=roadmap&amp;markers=color:red|{{$dnxk->toado}}" alt="">
                 @else
                     <img class="img-responsive"
-                         src="http://placehold.it/750x500" alt="750x450">
+                         src="{{url('images/default.png')}}" alt="750x450">
                 @endif
             </a>
             <h3><a href="{{url('dn-dich-vu-van-tai-xe-khach/'.$dnxk->masothue)}}">{{$dnxk->tendonvi}}</a></h3>
@@ -145,7 +145,7 @@
                             maptype=roadmap&amp;markers=color:red|{{$dnxb->toado}}" alt="">
                     @else
                         <img class="img-responsive"
-                             src="http://placehold.it/750x500" alt="750x450">
+                             src="{{url('images/default.png')}}" alt="750x450">
                     @endif
                 </a>
                 <h3><a href="{{url('dn-dich-vu-van-tai-xe-buyt/'.$dnxb->masothue)}}">{{$dnxb->tendonvi}}</a></h3>
@@ -179,7 +179,7 @@
                             maptype=roadmap&amp;markers=color:red|{{$dntx->toado}}" alt="">
                     @else
                         <img class="img-responsive"
-                             src="http://placehold.it/750x500" alt="750x450">
+                             src="{{url('images/default.png')}}" alt="750x450">
                     @endif
                 </a>
                 <h3><a href="{{url('dn-dich-vu-van-tai-xe-taxi/'.$dntx->masothue)}}">{{$dntx->tendonvi}}</a></h3>
@@ -196,7 +196,7 @@
     <!-- Page Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Dịch vụ vận tải chở hàng
+            <h1 class="page-header">Dịch vụ vận tải khác
                 <small>tiêu biểu</small>
             </h1>
         </div>
@@ -213,7 +213,7 @@
                             maptype=roadmap&amp;markers=color:red|{{$dntx->toado}}" alt="">
                     @else
                         <img class="img-responsive"
-                             src="http://placehold.it/750x500" alt="750x450">
+                             src="{{url('images/default.png')}}" alt="750x450">
                     @endif
                 </a>
                 <h3><a href="{{url('dn-dich-vu-van-tai-cho-hang/'.$dnch->masothue)}}">{{$dnch->tendonvi}}</a></h3>
