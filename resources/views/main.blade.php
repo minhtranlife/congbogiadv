@@ -78,7 +78,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{url('')}}">Công bố giá dịch vụ</a>
+            <a class="navbar-brand" href="{{url('')}}">Giá dịch vụ</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="mainnav">

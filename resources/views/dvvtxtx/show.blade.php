@@ -53,7 +53,7 @@
     @if($modelkkct != '')
     <div class="row">
         <div class="col-lg-12">
-            <h3>Bảng giá dịch vụ - ngày có hiệu lực {{getDayVn($modelkk->ngayhieuluc)}} -
+            <h3>Bảng giá dịch vụ - ngày có hiệu lực {{getDayVn($modelkk->ngayhieuluc)}} -  {{$modeldvql->tendv}}
                 nhận hồ sơ ngày {{getDayVn($modelkk->ngaynhan)}}</h3>
         </div>
         <div class="col-lg-12">
@@ -61,13 +61,20 @@
                 <table class="table table-bordered">
                     <thead>
                     <tr style="background: #F5F5F5">
-                        <th style="text-align: center" width="2%">STT</th>
-                        <th style="text-align: center">Tên dịch vụ</th>
-                        <th style="text-align: center">Quy cách chất lượng</th>
-                        <th style="text-align: center">Đơn vị tính</th>
-                        <th style="text-align: center" width="10%">Mức giá kê khai liền kề</th>
-                        <th style="text-align: center">Mức giá kê khai</th>
-                        <th style="text-align: center">Mức giá hành lý<br> vượt quy định</th>
+                        <th rowspan="2" style="text-align: center" width="2%">STT</th>
+                        <th rowspan="2" style="text-align: center">Tên dịch vụ</th>
+                        <th rowspan="2" style="text-align: center">Quy cách chất lượng</th>
+                        <th rowspan="2" style="text-align: center">Đơn vị tính</th>
+                        <th colspan="3" style="text-align: center">Mức giá kê khai liền kề</th>
+                        <th colspan="3" style="text-align: center">Mức giá kê khai</th>
+                    </tr>
+                    <tr style=" background: #F5F5F5">
+                        <th style="text-align: center">Giá mở cửa</th>
+                        <th style="text-align: center">Giá km tiếp theo đến km30</th>
+                        <th style="text-align: center">Giá từ km31 trở lên</th>
+                        <th style="text-align: center">Giá mở cửa</th>
+                        <th style="text-align: center">Giá km tiếp theo đến km30</th>
+                        <th style="text-align: center">Giá từ km31 trở lên</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -77,9 +84,12 @@
                         <td>{{$giaxk->tendichvu}}</td>
                         <td>{{$giaxk->qccl}}</td>
                         <td>{{$giaxk->dvt}}</td>
-                        <td align="right">{{number_format($giaxk->giakklk)}}</td>
-                        <td align="right">{{number_format($giaxk->giakk)}}</td>
-                        <td align="right">{{number_format($giaxk->giahl)}}</td>
+                        <td align="right">{{number_format($giaxk->giakklk).'/'.$giaxk->trenkmlk.'km'}}</td>
+                        <td align="right">{{number_format($giaxk->giakklkden)}}</td>
+                        <td align="right">{{number_format($giaxk->giakklktl)}}</td>
+                        <td align="right">{{number_format($giaxk->giakk).'/'.$giaxk->trenkm.'km'}}</td>
+                        <td align="right">{{number_format($giaxk->giakkden)}}</td>
+                        <td align="right">{{number_format($giaxk->giakktl)}}</td>
                     </tr>
                     @endforeach
                     </tbody>
@@ -88,7 +98,7 @@
         </div>
     </div>
     @else
-        <h3>Đơn vị cung cấp dịch vụ vận tải taxi chưa có kê khai giá gần nhất cho</h3>
+        <h3>Đơn vị cung cấp dịch vụ vận tải taxi chưa có kê khai giá gần nhất cho  {{$modeldvql->tendv}}</h3>
     @endif
 
     <div class="row">

@@ -97,7 +97,7 @@
     @if($modelkkct != '')
     <div class="row">
         <div class="col-lg-12">
-            <h3>Bảng giá dịch vụ - ngày có hiệu lực {{getDayVn($modelkk->ngayhieuluc)}} -
+            <h3>Bảng giá dịch vụ - ngày có hiệu lực {{getDayVn($modelkk->ngayhieuluc)}} - {{$modeldvql->tendv}}
                 nhận hồ sơ ngày {{getDayVn($modelkk->ngaynhan)}}</h3>
         </div>
         <div class="col-lg-12">
@@ -131,7 +131,7 @@
 
     </div>
     @else
-        <h3>Cơ sở kinh doanh dịch vụ lưu trú chưa có kê khai giá gần nhất cho {{(getGeneralConfigs()['tendonvi'])}}</h3>
+        <h3>Cơ sở kinh doanh dịch vụ lưu trú chưa có kê khai giá gần nhất cho  {{$modeldvql->tendv}}</h3>
     @endif
     <div class="row">
         <div class="col-lg-12">

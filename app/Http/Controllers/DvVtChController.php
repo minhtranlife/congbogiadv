@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\CbKkDvVtKhac;
+use App\DmDvQl;
 use App\DonViDvVt;
 use App\KkDvVtKhacCt;
 use Illuminate\Http\Request;
@@ -50,12 +51,15 @@ class DvVtChController extends Controller
             ->orderByRaw("RAND()")
             ->take(4)
             ->get();
+        $modeldvql = DmDvQl::where('maqhns',$model->cqcq)
+            ->first();
 
         return view('dvvtch.show')
             ->with('model',$model)
             ->with('modelkk',$modelkk)
             ->with('modelkkct',$modelkkct)
             ->with('modelk',$modelk)
+            ->with('modeldvql',$modeldvql)
             ->with('pageTitle','Thông tin doanh nghiệp cung cấp dịch vụ vận tải chở hàng');
     }
 

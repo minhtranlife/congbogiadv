@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CbKkGDvLt;
 use App\CsKdDvLt;
+use App\DmDvQl;
 use App\KkGDvLt;
 use App\KkGDvLtCt;
 use Illuminate\Http\Request;
@@ -49,11 +50,14 @@ class DvLtController extends Controller
             ->orderByRaw("RAND()")
             ->take(4)
             ->get();
+        $modeldvql = DmDvQl::where('maqhns',$model->cqcq)
+            ->first();
         return view('dvlt.show')
             ->with('model',$model)
             ->with('modelkk',$modelkk)
             ->with('modelkkct',$modelkkct)
             ->with('modelk',$modelk)
+            ->with('modeldvql',$modeldvql)
             ->with('pageTitle','Thông tin cơ sở kinh doanh');
     }
 

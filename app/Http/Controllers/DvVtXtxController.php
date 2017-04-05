@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\CbKkDvVtXtx;
+use App\DmDvQl;
 use App\DonViDvVt;
 use App\KkDvVtXtxCt;
 use Illuminate\Http\Request;
@@ -49,12 +50,15 @@ class DvVtXtxController extends Controller
             ->orderByRaw("RAND()")
             ->take(4)
             ->get();
+        $modeldvql = DmDvQl::where('maqhns',$model->cqcq)
+            ->first();
 
         return view('dvvtxtx.show')
             ->with('model',$model)
             ->with('modelkk',$modelkk)
             ->with('modelkkct',$modelkkct)
             ->with('modelk',$modelk)
+            ->with('modeldvql',$modeldvql)
             ->with('pageTitle','Thông tin doanh nghiệp cung cấp dịch vụ vận tải taxi');
     }
 
