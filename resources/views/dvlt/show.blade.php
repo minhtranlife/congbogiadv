@@ -102,7 +102,7 @@
         </div>
         @if($modelkk->phanloai=='DINHKEM')
             <div class="col-lg-12">
-                <a href="{{url('/data/uploads/attack/'.$tt->filedk)}}" target="_blank" class="btn btn-default btn-xs mbs"><i class="fa fa-eye"></i>&nbsp;Xem chi tiết</a>
+                <a href="{{url('/data/uploads/attack/'.$modelkk->filedk)}}" target="_blank" class="btn btn-default btn-xs mbs"><i class="fa fa-eye"></i>&nbsp;Xem chi tiết</a>
             </div>
         @else
             <div class="col-lg-12">
