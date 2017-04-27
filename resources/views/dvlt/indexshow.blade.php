@@ -18,6 +18,7 @@
                 var hang = '';
                 if($('#select_hang').length > 0 ){
                     var hang = '&hang='+$('#select_hang').val();
+
                 }
                 var cskd = '';
                 if($('#select_cskd').length > 0 ){
