@@ -14,7 +14,47 @@ use App\Http\Controllers\Controller;
 
 class DvLtController extends Controller
 {
-    public function index($hang)
+    public function index(Request $request){
+        $inputs = $request->all();
+
+        $kk = isset($inputs['kekhai']) ? $inputs['kekhai'] : 'KK';
+        $hang = isset($inputs['hang']) ? $inputs['hang'] : '3';
+        $maks = isset($inputs['cskd']) ? $inputs['cskd'] : 'all';
+
+
+        $itemsPerPage = 4;
+        if($kk == 'KK'){
+            $ksrd = CbKkGDvLt::join('cskddvlt', 'cbkkgdvlt.macskd', '=', 'cskddvlt.macskd')
+                ->groupby('cbkkgdvlt.macskd')
+                ->where('loaihang',$hang)
+                ->paginate($itemsPerPage);
+            if($maks !='all')
+                $ksrd = $ksrd->where('macskd',$maks);
+            $hotel = CbKkGDvLt::join('cskddvlt', 'cbkkgdvlt.macskd', '=', 'cskddvlt.macskd')
+                ->groupby('cbkkgdvlt.macskd')
+                ->where('loaihang',$hang)
+                ->get();
+
+        }else{
+            $ksrd = CsKdDvLt::where('loaihang',$hang)
+                ->paginate($itemsPerPage);
+            if($maks !='all')
+                $ksrd = $ksrd->where('macskd',$maks);
+            $hotel = CsKdDvLt::where('loaihang', $hang)
+                ->get();
+
+        }
+
+        return view('dvlt.indexshow')
+            ->with('kk',$kk)
+            ->with('ksrd',$ksrd)
+            ->with('hang',$hang)
+            ->with('hotel',$hotel)
+            ->with('maks',$maks)
+            ->with('pageTitle','Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú');
+    }
+
+    /*public function index($hang)
     {
         $itemsPerPage = 4;
             $ksrd = CsKdDvLt::where('loaihang',$hang)
@@ -30,7 +70,7 @@ class DvLtController extends Controller
             ->with('hotel',$hotel)
             ->with('maks','all')
             ->with('pageTitle','Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú');
-    }
+    }*/
 
 
     public function show($macskd)

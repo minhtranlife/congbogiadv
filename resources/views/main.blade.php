@@ -89,7 +89,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="{{url('dich-vu-luu-tru/ks-3-sao')}}">Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú</a>
+                            <a href="{{url('dich-vu-luu-tru')}}">Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú</a>
                         </li>
                     </ul>
                 </li>
