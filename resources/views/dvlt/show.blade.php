@@ -100,34 +100,41 @@
             <h3>Bảng giá dịch vụ - ngày có hiệu lực {{getDayVn($modelkk->ngayhieuluc)}} - {{$modeldvql->tendv}}
                 nhận hồ sơ ngày {{getDayVn($modelkk->ngaynhan)}}</h3>
         </div>
-        <div class="col-lg-12">
-            <div class="table-responsive">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr style="background: #F5F5F5">
-                        <th style="text-align: center" width="2%">STT</th>
-                        <th width="30%" style="text-align: center">Loại phòng - Quy cách chất lượng</th>
-                        <th width="40%" style="text-align: center">Số hiệu phòng</th>
-                        <th width="7%" style="text-align: center">Mức giá liền kề</th>
-                        <th width="7%" style="text-align: center">Mức giá kê khai</th>
-                        <th width="15%" style="text-align: center">Ghi chú</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($modelkkct as $key=>$giaph)
-                    <tr>
-                        <td style="text-align: center">{{($key + 1)}}</td>
-                        <td>{{$giaph->loaip}} - {{$giaph->qccl}}</td>
-                        <td>{{$giaph->sohieu}}</td>
-                        <td align="right" >{{number_format($giaph->mucgialk)}}</td>
-                        <td align="right" >{{number_format($giaph->mucgiakk)}}</td>
-                        <td>{{$giaph->ghichu}}</td>
-                    </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+        @if($modelkk->phanloai=='DINHKEM')
+            <div class="col-lg-12">
+                <a href="{{url('/data/uploads/attack/'.$modelkk->filedk)}}" target="_blank" class="btn btn-default btn-xs mbs"><i class="fa fa-eye"></i>&nbsp;Xem chi tiết</a>
             </div>
-        </div>
+        @else
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr style="background: #F5F5F5">
+                            <th style="text-align: center" width="2%">STT</th>
+                            <th width="30%" style="text-align: center">Loại phòng - Quy cách chất lượng</th>
+                            <th width="40%" style="text-align: center">Số hiệu phòng</th>
+                            <th width="7%" style="text-align: center">Mức giá liền kề</th>
+                            <th width="7%" style="text-align: center">Mức giá kê khai</th>
+                            <th width="15%" style="text-align: center">Ghi chú</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($modelkkct as $key=>$giaph)
+                            <tr>
+                                <td style="text-align: center">{{($key + 1)}}</td>
+                                <td>{{$giaph->loaip}} - {{$giaph->qccl}}</td>
+                                <td>{{$giaph->sohieu}}</td>
+                                <td align="right" >{{number_format($giaph->mucgialk)}}</td>
+                                <td align="right" >{{number_format($giaph->mucgiakk)}}</td>
+                                <td>{{$giaph->ghichu}}</td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            @endif
+
 
     </div>
     @else
