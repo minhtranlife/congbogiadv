@@ -18,6 +18,7 @@ Route::get('/', 'HomeController@index');
 Route::get('dich-vu-luu-tru','DvLtController@index');
 Route::get('cskd-dich-vu-luu-tru/{macskd}','DvLtController@show');
 //Route::get('dich-vu-luu-tru/ks-{hang}-sao','DvLtController@index');
+Route::get('dich-vu-luu-tru/kekhai={kk}&hang={hang}&cskd={cskd}','DvLtController@index');
 Route::get('dich-vu-luu-tru/ks-{hang}-sao/{cskd}','DvLtController@view');
 Route::get('cskd-dich-vu-luu-tru/{macskd}/view','DvLtController@viewct');
 Route::get('/ajax/getTTph/','DvLtController@getTTph');

@@ -8,29 +8,25 @@
 @section('custom-script')
     <script>
         $(function(){
-
-            $('#select_hang').change(function() {
+            $('#select_kk').change(function() {
+                var kk = $('#select_kk').val();
                 var hang = $('#select_hang').val();
-                var url = '/dich-vu-luu-tru/ks-'+hang+'-sao';
-
-                //var url = current_path_url;
+                var url = '/dich-vu-luu-tru/kekhai='+kk+'&hang='+hang+'&cskd=all';
                 window.location.href = url;
             });
-
-
-        })
-        $(function(){
-
+            $('#select_hang').change(function() {
+                var kk = $('#select_kk').val();
+                var hang = $('#select_hang').val();
+                var url = '/dich-vu-luu-tru/kekhai='+kk+'&hang='+hang+'&cskd=all';
+                window.location.href = url;
+            });
             $('#select_cskd').change(function() {
+                var kk = $('#select_kk').val();
                 var hang = $('#select_hang').val();
                 var cskd = $('#select_cskd').val();
-                var url = '/dich-vu-luu-tru/ks-'+hang+'-sao/'+cskd;
-
-                //var url = current_path_url;
+                var url = '/dich-vu-luu-tru/kekhai='+kk+'&hang='+hang+'&cskd='+cskd;
                 window.location.href = url;
             });
-
-
         })
     </script>
     <script src="{{url('vendors/select2/select2.min.js')}}"></script>
@@ -48,7 +44,16 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>Kê khai giá</label>
+                <select class="form-control" name="select_kk" id="select_kk" >
+                    <option value="CKK" {{($kk == 'CKK') ? 'selected' : ''}}>Chưa kê khai</option>
+                    <option value="KK" {{($kk == 'KK') ? 'selected' : ''}}>Đã kê khai</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-3">
             <div class="form-group">
                 <label>Loại hạng</label>
                 <select class="form-control" name="select_hang" id="select_hang" >
@@ -148,11 +153,13 @@
             </div>
         @endforeach
     </div>
+        @if($maks == 'all')
     <div class="row text-center">
         <div class="col-lg-12">
             {!! $ksrd->render() !!}
         </div>
     </div>
+            @endif
     @else
         <div class="row text-center">
             <div class="col-lg-12">

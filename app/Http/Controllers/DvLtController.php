@@ -14,64 +14,37 @@ use App\Http\Controllers\Controller;
 
 class DvLtController extends Controller
 {
-    public function index(Request $request){
-        $inputs = $request->all();
-
-        $kk = isset($inputs['kekhai']) ? $inputs['kekhai'] : 'KK';
-        $hang = isset($inputs['hang']) ? $inputs['hang'] : '3';
-        $maks = isset($inputs['cskd']) ? $inputs['cskd'] : 'all';
-
-
+    public function index($kk,$hang,$cskd)
+    {
         $itemsPerPage = 4;
         if($kk == 'KK'){
             $ksrd = CbKkGDvLt::join('cskddvlt', 'cbkkgdvlt.macskd', '=', 'cskddvlt.macskd')
                 ->groupby('cbkkgdvlt.macskd')
                 ->where('loaihang',$hang)
                 ->paginate($itemsPerPage);
-            if($maks !='all')
-                $ksrd = $ksrd->where('macskd',$maks);
+            if($cskd !='all')
+                $ksrd = $ksrd->where('macskd',$cskd);
             $hotel = CbKkGDvLt::join('cskddvlt', 'cbkkgdvlt.macskd', '=', 'cskddvlt.macskd')
                 ->groupby('cbkkgdvlt.macskd')
                 ->where('loaihang',$hang)
                 ->get();
-
         }else{
             $ksrd = CsKdDvLt::where('loaihang',$hang)
                 ->paginate($itemsPerPage);
-            if($maks !='all')
-                $ksrd = $ksrd->where('macskd',$maks);
+            if($cskd !='all')
+                $ksrd = $ksrd->where('macskd',$cskd);
             $hotel = CsKdDvLt::where('loaihang', $hang)
                 ->get();
 
         }
-
-        return view('dvlt.indexshow')
+        return view('dvlt.index')
             ->with('kk',$kk)
             ->with('ksrd',$ksrd)
             ->with('hang',$hang)
             ->with('hotel',$hotel)
-            ->with('maks',$maks)
+            ->with('maks',$cskd)
             ->with('pageTitle','Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú');
     }
-
-    /*public function index($hang)
-    {
-        $itemsPerPage = 4;
-            $ksrd = CsKdDvLt::where('loaihang',$hang)
-            ->paginate($itemsPerPage);
-
-        $hotel = CsKdDvLt::where('loaihang',$hang)
-            ->get();
-
-        return view('dvlt.index')
-            //->withCustomers($ksrd)
-            ->with('ksrd',$ksrd)
-            ->with('hang',$hang)
-            ->with('hotel',$hotel)
-            ->with('maks','all')
-            ->with('pageTitle','Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú');
-    }*/
-
 
     public function show($macskd)
     {
