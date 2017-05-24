@@ -132,6 +132,7 @@
                         </tbody>
                     </table>
                 </div>
+                {!! nl2br(e($modelkk->ghichu)) !!}
             </div>
             @endif
 
