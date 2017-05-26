@@ -29,12 +29,25 @@ class DvLtController extends Controller
                 ->where('loaihang',$hang)
                 ->get();
         }else{
-            $ksrd = CsKdDvLt::where('loaihang',$hang)
+            $modelcb = CbKkGDvLt::join('cskddvlt', 'cbkkgdvlt.macskd', '=', 'cskddvlt.macskd')
+                ->where('loaihang',$hang)
+                ->get();
+            $array = '';
+            foreach($modelcb as $tt){
+                $array = $array.$tt->macskd.',';
+            }
+            $ksrd = CsKdDvLt::where('loaihang', $hang)
+                ->wherenotIn('macskd',explode(',',$array))
                 ->paginate($itemsPerPage);
+
+
             if($cskd !='all')
                 $ksrd = $ksrd->where('macskd',$cskd);
             $hotel = CsKdDvLt::where('loaihang', $hang)
+                ->wherenotIn('macskd',explode(',',$array))
                 ->get();
+
+
 
         }
         return view('dvlt.index')

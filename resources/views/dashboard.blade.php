@@ -87,7 +87,7 @@
         </div>
         @endforeach
             <div class="col-lg-12">
-                <p align="right"><a href="{{url('dich-vu-luu-tru/ks-3-sao')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
+                <p align="right"><a href="{{url('dich-vu-luu-tru/kekhai=KK&hang=3&cskd=all')}}"  style="color:#5b9bd1">Xem chi tiết...</a></p>
             </div>
     </div>
     <!-- /.row -->
