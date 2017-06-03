@@ -37,44 +37,26 @@
                 <p>
                     @if($model->loaihang == '1')
                         <span class="glyphicon glyphicon-star"></span>
-                    @elseif($model->loaihang == '1.5')
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
                     @elseif($model->loaihang == '2')
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
-                    @elseif($model->loaihang == '2.5')
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
                     @elseif($model->loaihang == '3')
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
-                    @elseif($model->loaihang == '3.5')
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
                     @elseif($model->loaihang == '4')
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
-                    @elseif($model->loaihang == '4.5')
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
                     @elseif($model->loaihang == '5')
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
-                    @else
-                        {{$model->loaihang}}
+                    @elseif($model->loaihang == 'K' ) Khác(Nhà nghỉ)
+                    @elseif ($model->loaihang == 'CXD' ) Chưa xác định (Khách sạn chưa xác định sao)
                     @endif
                 </p>
             </div>
@@ -162,44 +144,26 @@
                 <p>
                     @if($ksk->loaihang == '1')
                         <span class="glyphicon glyphicon-star"></span>
-                    @elseif($ksk->loaihang == '1.5')
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
                     @elseif($ksk->loaihang == '2')
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
-                    @elseif($ksk->loaihang == '2.5')
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
                     @elseif($ksk->loaihang == '3')
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
-                    @elseif($ksk->loaihang == '3.5')
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
                     @elseif($ksk->loaihang == '4')
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
-                    @elseif($ksk->loaihang == '4.5')
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
                     @elseif($ksk->loaihang == '5')
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
-                    @else
-                        {{$ksk->loaihang}}
+                    @elseif($ksk->loaihang == 'K' ) Khác(Nhà nghỉ)
+                    @elseif ($ksk->loaihang == 'CXD' ) Chưa xác định (Khách sạn chưa xác định sao)
                     @endif
                 </p>
             </div>
