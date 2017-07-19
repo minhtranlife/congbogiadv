@@ -7,6 +7,7 @@ use App\CsKdDvLt;
 use App\DmDvQl;
 use App\KkGDvLt;
 use App\KkGDvLtCt;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -64,7 +65,11 @@ class DvLtController extends Controller
         $model= CsKdDvLt::where('macskd',$macskd)
             ->first();
         //dd($model);
-        $modelkk = CbKkGDvLt::where('macskd',$macskd)
+        $now = date('Y-m-d',strtotime(Carbon::now()->toDateTimeString()));
+        $modelkk = KkGDvLt::where('macskd',$macskd)
+            ->where('trangthai','Duyệt')
+            ->whereBetween('ngayhieuluc', ['',$now ])
+            ->orderBy('id', 'desc')
             ->first();
         if(isset($modelkk)) {
             $modelkkct = KkGDvLtCt::where('mahs', $modelkk->mahs)
@@ -111,7 +116,9 @@ class DvLtController extends Controller
         $model = CsKdDvLt::where('macskd',$macskd)
             ->first();
         $itemsPerPage = 10;
+        $now = date('Y-m-d',strtotime(Carbon::now()->toDateTimeString()));
         $modelct = KkGDvLt::where('macskd',$macskd)
+            ->whereBetween('ngayhieuluc', ['',$now ])
             ->orderBy('id', 'esc')
             ->where('trangthai','Duyệt')
             ->paginate($itemsPerPage);
