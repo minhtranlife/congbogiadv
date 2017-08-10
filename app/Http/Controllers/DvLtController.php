@@ -43,8 +43,8 @@ class DvLtController extends Controller
 
 
             if($cskd !='all')
-                $ksrd = $ksrd->where('macskd',$cskd);
-            $hotel = CsKdDvLt::where('loaihang', $hang)
+                $ksrd = $ksrd->where('macskd',$cskd)->first();
+                $hotel = CsKdDvLt::where('loaihang', $hang)
                 ->wherenotIn('macskd',explode(',',$array))
                 ->get();
 
