@@ -87,7 +87,7 @@
 
     <!-- Projects Row -->
     <div id="ttcskd">
-    @if(count($ksrd)!=0)
+    @if(count($ksrd)>0)
     <div class="row">
         @foreach($ksrd as $ks)
             <div class="col-md-3 portfolio-item">

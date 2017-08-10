@@ -21,10 +21,11 @@ class DvLtController extends Controller
         if($kk == 'KK'){
             $ksrd = CbKkGDvLt::join('cskddvlt', 'cbkkgdvlt.macskd', '=', 'cskddvlt.macskd')
                 ->groupby('cbkkgdvlt.macskd')
-                ->where('loaihang',$hang)
-                ->paginate($itemsPerPage);
+                ->where('loaihang',$hang);
             if($cskd !='all')
-                $ksrd = $ksrd->where('macskd',$cskd);
+                $ksrd = $ksrd->where('cbkkgdvlt.macskd',$cskd);
+
+            $ksrd = $ksrd->paginate($itemsPerPage);
             $hotel = CbKkGDvLt::join('cskddvlt', 'cbkkgdvlt.macskd', '=', 'cskddvlt.macskd')
                 ->groupby('cbkkgdvlt.macskd')
                 ->where('loaihang',$hang)
@@ -43,7 +44,7 @@ class DvLtController extends Controller
 
 
             if($cskd !='all')
-                $ksrd = $ksrd->where('macskd',$cskd)->first();
+                $ksrd = $ksrd->where('macskd',$cskd);
                 $hotel = CsKdDvLt::where('loaihang', $hang)
                 ->wherenotIn('macskd',explode(',',$array))
                 ->get();
