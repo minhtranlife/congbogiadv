@@ -57,6 +57,9 @@
             <div class="form-group">
                 <label>Loại hạng</label>
                 <select class="form-control" name="select_hang" id="select_hang" >
+                    @if($kk == 'KK')
+                    <option value="all" {{($hang == 'all') ? 'selected' : ''}}>--Tất cả--</option>
+                    @endif
                     <option value="1" {{($hang == 1) ? 'selected' : ''}}>1 sao</option>
                     <option value="2" {{($hang == 2) ? 'selected' : ''}}>2 sao</option>
                     <option value="3" {{($hang == 3) ? 'selected' : ''}}>3 sao</option>
