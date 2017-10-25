@@ -164,4 +164,22 @@ class DvLtController extends Controller
         die(json_encode($result));
     }
 
+    public function timkiemdn(Request $request){
+        $inputs = $request->all();
+        $itemsPerPage = 4;
+        $ksrd = CbKkGDvLt::join('cskddvlt', 'cbkkgdvlt.macskd', '=', 'cskddvlt.macskd')
+            ->groupby('cbkkgdvlt.macskd');
+        if(isset($inputs['masothue'])) {
+            $masothue = $inputs['masothue'];
+            $ksrd = $ksrd->where('cbkkgdvlt.masothue', 'like', '%' . $masothue . '%');
+        }else
+            $masothue = '';
+        $ksrd = $ksrd->paginate($itemsPerPage);
+        //dd($ksrd);
+        return view('dvlt.search')
+            ->with('ksrd',$ksrd)
+            ->with('masothue',$masothue)
+            ->with('pageTitle','Tìm kiếm doanh nghiệp cung cấp dịch vụ lưu trú');
+    }
+
 }

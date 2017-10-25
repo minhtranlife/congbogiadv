@@ -22,6 +22,7 @@ Route::get('dich-vu-luu-tru/kekhai={kk}&hang={hang}&cskd={cskd}','DvLtController
 Route::get('dich-vu-luu-tru/ks-{hang}-sao/{cskd}','DvLtController@view');
 Route::get('cskd-dich-vu-luu-tru/{macskd}/view','DvLtController@viewct');
 Route::get('/ajax/getTTph/','DvLtController@getTTph');
+Route::get('tim_kiem_doanh_nghiep_dvlt','DvLtController@timkiemdn');
 
     //Dịch vụ vận tải xe khách
 Route::get('dn-dich-vu-van-tai-xe-khach/{masothue}','DvVtXkController@show');

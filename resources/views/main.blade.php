@@ -90,6 +90,7 @@
                     <ul class="dropdown-menu">
                         <li>
                             <a href="{{url('dich-vu-luu-tru/kekhai=KK&hang=3&cskd=all')}}">Danh sách cơ sở kinh doanh cung cấp dịch vụ lưu trú</a>
+                            <a href="{{url('tim_kiem_doanh_nghiep_dvlt')}}">Tra cứu doanh nghiệp cung cấp dịch vụ lưu trú</a>
                         </li>
                     </ul>
                 </li>
