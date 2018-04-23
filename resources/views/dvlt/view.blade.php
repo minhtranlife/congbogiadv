@@ -43,7 +43,7 @@
                             <td style="text-align: center">{{$ct->socv}}</td>
                             <td style="text-align: center">{{$ct->socvlk}}</td>
                             <td>
-                                <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="getTTph({{$ct->mahs}})">Xem chi tiết</button>
+                                T
                             </td>
                         </tr>
                     @endforeach

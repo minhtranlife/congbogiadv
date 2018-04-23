@@ -19,22 +19,20 @@ class DvLtController extends Controller
     {
         $itemsPerPage = 4;
         if($kk == 'KK'){
-            $ksrd = CbKkGDvLt::join('cskddvlt', 'cbkkgdvlt.macskd', '=', 'cskddvlt.macskd')
-                ->groupby('cbkkgdvlt.macskd');
+            $ksrd = CbKkGDvLt::groupby('macskd');
             if($hang != 'all')
                 $ksrd = $ksrd->where('loaihang',$hang);
             if($cskd !='all')
-                $ksrd = $ksrd->where('cbkkgdvlt.macskd',$cskd);
+                $ksrd = $ksrd->where('macskd',$cskd);
 
             $ksrd = $ksrd->paginate($itemsPerPage);
-            $hotel = CbKkGDvLt::join('cskddvlt', 'cbkkgdvlt.macskd', '=', 'cskddvlt.macskd')
-                ->groupby('cbkkgdvlt.macskd');
+
+            $hotel = CbKkGDvLt::groupby('cbkkgdvlt.macskd');
             if($hang != 'all')
                 $hotel = $hotel->where('loaihang',$hang);
             $hotel = $hotel->get();
         }else{
-            $modelcb = CbKkGDvLt::join('cskddvlt', 'cbkkgdvlt.macskd', '=', 'cskddvlt.macskd')
-                ->where('loaihang',$hang)
+            $modelcb = CbKkGDvLt::where('loaihang',$hang)
                 ->get();
             $array = '';
             foreach($modelcb as $tt){

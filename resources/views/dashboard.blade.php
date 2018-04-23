@@ -25,14 +25,7 @@
         @foreach($ksrd as $ks)
         <div class="col-md-3 portfolio-item">
             <a href="{{'cskd-dich-vu-luu-tru/'.$ks->macskd}}">
-                @if($ks->toado != null)
-                    <img class="img-responsive"
-                         src="https://maps.googleapis.com/maps/api/staticmap?zoom=17&amp;size=750x425&amp;sensor=false&amp;
-                            maptype=roadmap&amp;markers=color:red|{{$ks->toado}}" alt="">
-                @else
-                    <img class="img-responsive"
-                         src="{{url('images/default.png')}}" alt="750x450">
-                @endif
+                    <img class="img-responsive" src="file:///E:/VitualHost/giadichvu.dev/public/images/cskddvlt/4200808560.jpg">
             </a>
             <h3><a href="{{'cskd-dich-vu-luu-tru/'.$ks->macskd}}">{{$ks->tencskd}}</a></h3>
             <div class="ratings" style="color: #ec0;">
